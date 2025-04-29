@@ -1,0 +1,92 @@
+questions: 8 with 3 answers each, 1 with 6 (each character appears 5 times)
+------------------------------
+1 Choose a music band:
+Anything with fonk - CPP
+TTC - JS
+Frank Sinatra - HTML
+Fleetwood Mac - CSS
+Thom Yorke - PY
+SQL - Men At Work
+-------------------------------
+2 Go-to summer drink:
+Mohito - JS2
+Sparkling water - SQL
+Orange juice - PY2
+-------------------------------
+3 Which school subject do you like the most?
+History - HTML3
+Chemistry - CSS2
+Math - CPP2
+-----------------------------------
+4 Do you like change?
+Love it - JS3
+Hate it - SQL2
+Can adapt- PY4
+-------------------------------
+5 Weekend plan:
+Book club - HTML2
+Gaming event - CPP3
+Planning the next week - SQL3
+---------------------------
+6 Choose a bird:
+Peacock - CSS3
+Crow - HTML4
+Parrot - JS3
+---------------------------
+7 Choose a weather:
+No clouds, but no heat eather - HTML3
+Full sun, hot and preferably a raibow too - CSS 4
+Rainy, wont mind a thunder - CPP 4
+---------------------------------
+8 Which TP quote sounds the coolest?
+CPP5 - Laura Palmer: I feel like I know her... but sometimes my arms bend back.
+CSS - "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night." Wally Waldo
+PY5 - Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee. - Dale Cooper
+-----------------------------
+9 Did you lie during the test?
+Yes- JS4
+No- Python5
+Wont tell - CPP5
+---------------------------
+
+HTML
+1 Weekend plan - book club
+2 Frank Sinatra
+3 No clouds, no heat eather
+4 Bird - Crow
+5 Likes history
+
+CSS
+1 Bird - Peacock
+2 Fleetwood Mac
+3 Loves Chemistry
+4 Sunny rainbow
+5 "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night."
+
+JS
+1 Bird - Parrot
+2 Loves change
+3 Tyler The Creator
+4 Mohito
+5 Lied during test
+
+PY
+1 Orange juice
+2 Can adapt to change if needed
+3 Thom Yorke
+4 Quote: Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.
+5 Didnt lie during test
+
+CPP
+1 Weekend plan - Gaming festival
+2 Anything with fonk will work
+3 Wont tell if lied during test
+4 Rainy thunder
+5 Laura Palmer: I feel like I know her... but sometimes my arms bend back.
+
+SQL 
+1 Men At Work
+2 Hates change
+3 Sparkling water
+4 Loves math
+5 Planning the next week plans
