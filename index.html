@@ -1,220 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TECHKNUTTAR</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="js/script.js"></script>
   </head>
   <body>
     <header>
       <nav class="settings">
-        <a href="">🇩🇪</a>
-        <a href="">🇬🇧</a>
-        <a href="">🇺🇦</a>
-        <a href="">🌞</a>
+        <a class="tab active" onclick="openTab(event,'german')">🇩🇪</a>
+        <a class="tab" onclick="openTab(event,'ukrainian')">🇺🇦</a>
+        <a class="tab" onclick="openTab(event,'english')">🇬🇧</a>
+        <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>
       </nav>
-      <hgroup>
-        <h1><span id="brandname">TECHKNUTTAR</span></h1>
-        <p>
-          swedish for "tech geeks". <br />
-          what would coding languages be if they were just passing-by people?
-        </p>
-      </hgroup>
+
       <nav id="pagelinks">
-        <a href="./index.html" style="color: yellow;">Home</a>
+        <a href="./index.html" style="color: yellow">Home</a>
         <a href="./links.html">Links</a>
         <a href="./test.html">Test</a>
       </nav>
     </header>
+
     <main>
-      <article>
-        <h1>Hello everyone!</h1>
-        <p>
-          Personification is a popular hobby amongst artists, directors and
-          designers. We love to see what food, colors, social media etc would be
-          as people. <br />
-          To combine my interest for art and programming, I introduce you to the
-          various coding languages I tried as characters I designed mysef.
-        </p>
-        <hr />
-        <section class="grid">
-          <div class="langdesc">
-            <h2>HTML & CSS</h2>
-            <p>
-              Your classic college sweethearts. With HTML (his name would
-              probably be Henry or something) being basic classy man who spends
-              his time reading and occasionally engaging in philosophical
-              conversations and CSS (probably named Casey) being the golden
-              retriever of the couple and spending time taking up a new creative
-              hobby everyday they balance each other out like no other couple
-              can.
+      <!--German -->
+      <div class="content-tab active" id="german">
+        <div class="hero">
+          <hgroup>
+            <h1 class="title">TECHKNUTTAR</h1>
+            <p class="definition">Schwedisch für „Technikfreaks“.</p>
+            <p class="subtitle">
+              Was wären Programmiersprachen, wenn sie nur von Passanten benutzt
+              würden?
             </p>
-            <p>Also typical for this couple:</p>
-            <ul>
-              <li>
-                Not an extraverted pair: Friday Nights are Netflix-and-Chill
-                Nights.
-              </li>
-              <li>HTML only dresses in H&M (ironic) or Zara</li>
-              <li>
-                CSS loves to cook and often burns the whole kitchen which HTML
-                then has to clean up
-              </li>
-              <li>
-                They plan on getting a pet but CSS is more of a cat person
-                whereas HTML wants a Labrador.
-              </li>
-            </ul>
-          </div>
-          <div class="langimg">
-            <figure>
-              <img src="./img/htmlcssfull.jpg" alt="" />
-            </figure>
-          </div>
-        </section>
-        <hr />
-        <section class="grid">
-          <div class="langimg">
-            <figure>
-              <img src="./img/jsfull.jpg" alt="" />
-            </figure>
-          </div>
-          <div class="langdesc">
-            <h2>JAVA SCRIPT</h2>
-            <p>
-              The one person whose music is so loud you hear it from their
-              headphones. Popular on social media, a trendsetter and also hard
-              to talk to because even though they are super funny and
-              interesting they get bored easily and are also absolutely
-              unstable.
-            </p>
-            <p>Also typical for JS:</p>
-            <ul>
-              <li>
-                Dye their hair every three weeks (Ramona Flowers reference)
-              </li>
-              <li>Love thrift stores and window-shopping</li>
-              <li>Will correct you on peoples pronouns (aggressively)</li>
-              <li>
-                Friends with CSS and also in competitive relationship with
-                Python
-              </li>
-            </ul>
-          </div>
-        </section>
-        <hr />
-        <section class="grid">
-          <div class="langdesc">
-            <h2>PYTHON</h2>
-            <p>
-              The guy you imidiately want to befriend. Super easy to talk to, a
-              hero of problem solving and also just fun to be around. In my
-              world Python in probably named James or Brian and hes always
-              carryng all his hardware around bus somehow still manages to look
-              cool.
-            </p>
-            <p>Also typical for Python:</p>
-            <ul>
-              <li>Is friends with literally everyone and also multilingual</li>
-              <li>
-                Minimalistic and quality oriented: when he finds one good
-                sweater, he would probably buy 6 more of them to wear everyday
-              </li>
-              <li>Perfect handwriting</li>
-              <li>Very straight forward and would always speak his truth</li>
-            </ul>
-          </div>
-          <div class="langimg">
-            <figure>
-              <img src="./img/pyfull.jpg" alt="" />
-            </figure>
-          </div>
-        </section>
-        <hr />
-        <section class="grid">
-          <div class="langimg">
-            <figure>
-              <img src="./img/sqlfull.jpg" alt="" />
-            </figure>
-          </div>
-          <div class="langdesc">
-            <h2>SQL</h2>
-            <p>
-              The ultimate girl boss. So detail oriented it may be overwhelming
-              at first, but also very professional and reliable. SQL is always
-              working and taking new tasks, to have a date with her you would
-              probably need to fight for a spot in 5 weeks from now. Although it
-              would be complicated to get with her as she's exclusively dating
-              Excel.
-            </p>
-            <p>Also typical for SQL:</p>
-            <ul>
-              <li>
-                Not really strong creative side is compensated by examplatory
-                skills in math
-              </li>
-              <li>Listens to opera for fun</li>
-              <li>Sorts everything by colors</li>
-              <li>
-                A fast responder - she would probably answer right away even
-                when having a huge amount of work
-              </li>
-            </ul>
-          </div>
-        </section>
-        <hr />
-        <section class="grid">
-          <div class="langdesc">
-            <h2>C++</h2>
-            <p>
-              The mystical, quiet one of the group. The closest figure that
-              comes to mind in terms of personality is L from Death Note -
-              except C++ is a girl and diabetic. Lots of people are scared of
-              her or talking behind her back (the same goes to all of the
-              members of C family). But maybe if you actually got to know her
-              you'll find out shes a really helpful sweet girl with a good taste
-              in computer games? *I don't know, I've never got this far.
-            </p>
-            <p>Also typical for SQL:</p>
-            <ul>
-              <li>A true definition of picky eater.</li>
-              <li>
-                Games at night, sleeps at day and survives on energy drinks
-              </li>
-              <li>
-                At her home she'll serve you frozen food you'll need to heat up
-                yourself.
-              </li>
-              <li>
-                At the group work she'll make the whole presentation herself
-                because she's sure noone can make it as good as her
-              </li>
-            </ul>
-          </div>
-          <div class="langimg">
-            <figure>
-              <img src="./img/cppfull.jpg" alt="" />
-            </figure>
-          </div>
-        </section>
-        <hr />
-        <section id="testing">
-          <h1 class="title">BUT WAIT A MINUTE... WHO ARE YOU?</h1>
+          </hgroup>
+        </div>
+
+        <article>
+          <h2>Hello everyone!</h2>
           <p>
-            You want to know which of the six people presented here resembles
-            you the most?
-            <br />Then take a test, answer honesly and prepate to meet your
-            programming language-self. <br />Have fun!
+            Personification is a popular hobby amongst artists, directors and
+            designers. We love to see what food, colors, social media etc would
+            be as people. To combine my interest for art and programming, I
+            introduce you to the various coding languages I tried as characters
+            I designed mysef.
           </p>
-          <a href="./test.html" id="button">
-            <span>TAKE A TEST</span>
-          </a>
-        </section>
-      </article>
+          <hr />
+
+          <section class="grid">
+            <div class="langdesc">
+              <h2>HTML & CSS</h2>
+              <p>
+                Your classic college sweethearts. With HTML (his name would
+                probably be Henry or something) being basic classy man who
+                spends his time reading and occasionally engaging in
+                philosophical conversations and CSS (probably named Casey) being
+                the golden retriever of the couple and spending time taking up a
+                new creative hobby everyday they balance each other out like no
+                other couple can.
+              </p>
+              <p>Also typical for this couple:</p>
+              <ul>
+                <li>
+                  Not an extraverted pair: Friday Nights are Netflix-and-Chill
+                  Nights.
+                </li>
+                <li>HTML only dresses in H&M (ironic) or Zara</li>
+                <li>
+                  CSS loves to cook and often burns the whole kitchen which HTML
+                  then has to clean up
+                </li>
+                <li>
+                  They plan on getting a pet but CSS is more of a cat person
+                  whereas HTML wants a Labrador.
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/htmlcssfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/jsfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>JAVA SCRIPT</h2>
+              <p>
+                The one person whose music is so loud you hear it from their
+                headphones. Popular on social media, a trendsetter and also hard
+                to talk to because even though they are super funny and
+                interesting they get bored easily and are also absolutely
+                unstable.
+              </p>
+              <p>Also typical for JS:</p>
+              <ul>
+                <li>
+                  Dye their hair every three weeks (Ramona Flowers reference)
+                </li>
+                <li>Love thrift stores and window-shopping</li>
+                <li>Will correct you on peoples pronouns (aggressively)</li>
+                <li>
+                  Friends with CSS and also in competitive relationship with
+                  Python
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>PYTHON</h2>
+              <p>
+                The guy you imidiately want to befriend. Super easy to talk to,
+                a hero of problem solving and also just fun to be around. In my
+                world Python in probably named James or Brian and hes always
+                carryng all his hardware around bus somehow still manages to
+                look cool.
+              </p>
+              <p>Also typical for Python:</p>
+              <ul>
+                <li>
+                  Is friends with literally everyone and also multilingual
+                </li>
+                <li>
+                  Minimalistic and quality oriented: when he finds one good
+                  sweater, he would probably buy 6 more of them to wear everyday
+                </li>
+                <li>Perfect handwriting</li>
+                <li>Very straight forward and would always speak his truth</li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/pyfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/sqlfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>SQL</h2>
+              <p>
+                The ultimate girl boss. So detail oriented it may be
+                overwhelming at first, but also very professional and reliable.
+                SQL is always working and taking new tasks, to have a date with
+                her you would probably need to fight for a spot in 5 weeks from
+                now. Although it would be complicated to get with her as she's
+                exclusively dating Excel.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>
+                  Not really strong creative side is compensated by examplatory
+                  skills in math
+                </li>
+                <li>Listens to opera for fun</li>
+                <li>Sorts everything by colors</li>
+                <li>
+                  A fast responder - she would probably answer right away even
+                  when having a huge amount of work
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>C++</h2>
+              <p>
+                The mystical, quiet one of the group. The closest figure that
+                comes to mind in terms of personality is L from Death Note -
+                except C++ is a girl and diabetic. Lots of people are scared of
+                her or talking behind her back (the same goes to all of the
+                members of C family). But maybe if you actually got to know her
+                you'll find out shes a really helpful sweet girl with a good
+                taste in computer games? *I don't know, I've never got this far.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>A true definition of picky eater.</li>
+                <li>
+                  Games at night, sleeps at day and survives on energy drinks
+                </li>
+                <li>
+                  At her home she'll serve you frozen food you'll need to heat
+                  up yourself.
+                </li>
+                <li>
+                  At the group work she'll make the whole presentation herself
+                  because she's sure noone can make it as good as her
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/cppfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+
+          <footer class="article_footer">
+            <hr />
+            <section id="testing">
+              <h1 class="title">BUT WAIT A MINUTE... WHO ARE YOU?</h1>
+              <p>
+                You want to know which of the six people presented here
+                resembles you the most?
+                <br />Then take a test, answer honesly and prepate to meet your
+                programming language-self. <br />Have fun!
+              </p>
+              <a href="./test.html" id="button">
+                <span>TAKE A TEST</span>
+              </a>
+            </section>
+          </footer>
+        </article>
+      </div>
+
+      <!-- English -->
+      <div class="content-tab" id="english">
+        <div class="hero">
+          <hgroup>
+            <h1 class="title">TECHKNUTTAR</h1>
+            <p class="definition">Swedish for "tech geeks.</p>
+            <p class="subtitle">
+              What would coding languages be if they were just passing-by people?
+            </p>
+          </hgroup>
+        </div>
+
+        <article>
+          <h2>Hello everyone!</h2>
+          <p>
+            Personification is a popular hobby amongst artists, directors and
+            designers. We love to see what food, colors, social media etc would
+            be as people. To combine my interest for art and programming, I
+            introduce you to the various coding languages I tried as characters
+            I designed mysef.
+          </p>
+          <hr />
+
+          <section class="grid">
+            <div class="langdesc">
+              <h2>HTML & CSS</h2>
+              <p>
+                Your classic college sweethearts. With HTML (his name would
+                probably be Henry or something) being basic classy man who
+                spends his time reading and occasionally engaging in
+                philosophical conversations and CSS (probably named Casey) being
+                the golden retriever of the couple and spending time taking up a
+                new creative hobby everyday they balance each other out like no
+                other couple can.
+              </p>
+              <p>Also typical for this couple:</p>
+              <ul>
+                <li>
+                  Not an extraverted pair: Friday Nights are Netflix-and-Chill
+                  Nights.
+                </li>
+                <li>HTML only dresses in H&M (ironic) or Zara</li>
+                <li>
+                  CSS loves to cook and often burns the whole kitchen which HTML
+                  then has to clean up
+                </li>
+                <li>
+                  They plan on getting a pet but CSS is more of a cat person
+                  whereas HTML wants a Labrador.
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/htmlcssfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/jsfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>JAVA SCRIPT</h2>
+              <p>
+                The one person whose music is so loud you hear it from their
+                headphones. Popular on social media, a trendsetter and also hard
+                to talk to because even though they are super funny and
+                interesting they get bored easily and are also absolutely
+                unstable.
+              </p>
+              <p>Also typical for JS:</p>
+              <ul>
+                <li>
+                  Dye their hair every three weeks (Ramona Flowers reference)
+                </li>
+                <li>Love thrift stores and window-shopping</li>
+                <li>Will correct you on peoples pronouns (aggressively)</li>
+                <li>
+                  Friends with CSS and also in competitive relationship with
+                  Python
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>PYTHON</h2>
+              <p>
+                The guy you imidiately want to befriend. Super easy to talk to,
+                a hero of problem solving and also just fun to be around. In my
+                world Python in probably named James or Brian and hes always
+                carryng all his hardware around bus somehow still manages to
+                look cool.
+              </p>
+              <p>Also typical for Python:</p>
+              <ul>
+                <li>
+                  Is friends with literally everyone and also multilingual
+                </li>
+                <li>
+                  Minimalistic and quality oriented: when he finds one good
+                  sweater, he would probably buy 6 more of them to wear everyday
+                </li>
+                <li>Perfect handwriting</li>
+                <li>Very straight forward and would always speak his truth</li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/pyfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/sqlfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>SQL</h2>
+              <p>
+                The ultimate girl boss. So detail oriented it may be
+                overwhelming at first, but also very professional and reliable.
+                SQL is always working and taking new tasks, to have a date with
+                her you would probably need to fight for a spot in 5 weeks from
+                now. Although it would be complicated to get with her as she's
+                exclusively dating Excel.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>
+                  Not really strong creative side is compensated by examplatory
+                  skills in math
+                </li>
+                <li>Listens to opera for fun</li>
+                <li>Sorts everything by colors</li>
+                <li>
+                  A fast responder - she would probably answer right away even
+                  when having a huge amount of work
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>C++</h2>
+              <p>
+                The mystical, quiet one of the group. The closest figure that
+                comes to mind in terms of personality is L from Death Note -
+                except C++ is a girl and diabetic. Lots of people are scared of
+                her or talking behind her back (the same goes to all of the
+                members of C family). But maybe if you actually got to know her
+                you'll find out shes a really helpful sweet girl with a good
+                taste in computer games? *I don't know, I've never got this far.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>A true definition of picky eater.</li>
+                <li>
+                  Games at night, sleeps at day and survives on energy drinks
+                </li>
+                <li>
+                  At her home she'll serve you frozen food you'll need to heat
+                  up yourself.
+                </li>
+                <li>
+                  At the group work she'll make the whole presentation herself
+                  because she's sure noone can make it as good as her
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/cppfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+
+          <footer class="article_footer">
+            <hr />
+            <section id="testing">
+              <h1 class="title">BUT WAIT A MINUTE... WHO ARE YOU?</h1>
+              <p>
+                You want to know which of the six people presented here
+                resembles you the most?
+                <br />Then take a test, answer honesly and prepate to meet your
+                programming language-self. <br />Have fun!
+              </p>
+              <a href="./test.html" id="button">
+                <span>TAKE A TEST</span>
+              </a>
+            </section>
+          </footer>
+        </article>
+      </div>
+      
+      
+      <!-- Ukrainian -->
+      <div class="content-tab" id="ukrainian">
+        <div class="hero">
+          <hgroup>
+            <h1 class="title">TECHKNUTTAR</h1>
+            <p class="definition">Шведською мовою «технічні гіки».</p>
+            <p class="subtitle">
+              Якими були б мови програмування, якби це були просто перехожі?
+            </p>
+          </hgroup>
+        </div>
+
+        <article>
+          <h2>Hello everyone!</h2>
+          <p>
+            Personification is a popular hobby amongst artists, directors and
+            designers. We love to see what food, colors, social media etc would
+            be as people. To combine my interest for art and programming, I
+            introduce you to the various coding languages I tried as characters
+            I designed mysef.
+          </p>
+          <hr />
+
+          <section class="grid">
+            <div class="langdesc">
+              <h2>HTML & CSS</h2>
+              <p>
+                Your classic college sweethearts. With HTML (his name would
+                probably be Henry or something) being basic classy man who
+                spends his time reading and occasionally engaging in
+                philosophical conversations and CSS (probably named Casey) being
+                the golden retriever of the couple and spending time taking up a
+                new creative hobby everyday they balance each other out like no
+                other couple can.
+              </p>
+              <p>Also typical for this couple:</p>
+              <ul>
+                <li>
+                  Not an extraverted pair: Friday Nights are Netflix-and-Chill
+                  Nights.
+                </li>
+                <li>HTML only dresses in H&M (ironic) or Zara</li>
+                <li>
+                  CSS loves to cook and often burns the whole kitchen which HTML
+                  then has to clean up
+                </li>
+                <li>
+                  They plan on getting a pet but CSS is more of a cat person
+                  whereas HTML wants a Labrador.
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/htmlcssfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/jsfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>JAVA SCRIPT</h2>
+              <p>
+                The one person whose music is so loud you hear it from their
+                headphones. Popular on social media, a trendsetter and also hard
+                to talk to because even though they are super funny and
+                interesting they get bored easily and are also absolutely
+                unstable.
+              </p>
+              <p>Also typical for JS:</p>
+              <ul>
+                <li>
+                  Dye their hair every three weeks (Ramona Flowers reference)
+                </li>
+                <li>Love thrift stores and window-shopping</li>
+                <li>Will correct you on peoples pronouns (aggressively)</li>
+                <li>
+                  Friends with CSS and also in competitive relationship with
+                  Python
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>PYTHON</h2>
+              <p>
+                The guy you imidiately want to befriend. Super easy to talk to,
+                a hero of problem solving and also just fun to be around. In my
+                world Python in probably named James or Brian and hes always
+                carryng all his hardware around bus somehow still manages to
+                look cool.
+              </p>
+              <p>Also typical for Python:</p>
+              <ul>
+                <li>
+                  Is friends with literally everyone and also multilingual
+                </li>
+                <li>
+                  Minimalistic and quality oriented: when he finds one good
+                  sweater, he would probably buy 6 more of them to wear everyday
+                </li>
+                <li>Perfect handwriting</li>
+                <li>Very straight forward and would always speak his truth</li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/pyfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langimg">
+              <figure>
+                <img src="./img/sqlfull.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="langdesc">
+              <h2>SQL</h2>
+              <p>
+                The ultimate girl boss. So detail oriented it may be
+                overwhelming at first, but also very professional and reliable.
+                SQL is always working and taking new tasks, to have a date with
+                her you would probably need to fight for a spot in 5 weeks from
+                now. Although it would be complicated to get with her as she's
+                exclusively dating Excel.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>
+                  Not really strong creative side is compensated by examplatory
+                  skills in math
+                </li>
+                <li>Listens to opera for fun</li>
+                <li>Sorts everything by colors</li>
+                <li>
+                  A fast responder - she would probably answer right away even
+                  when having a huge amount of work
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="grid">
+            <div class="langdesc">
+              <h2>C++</h2>
+              <p>
+                The mystical, quiet one of the group. The closest figure that
+                comes to mind in terms of personality is L from Death Note -
+                except C++ is a girl and diabetic. Lots of people are scared of
+                her or talking behind her back (the same goes to all of the
+                members of C family). But maybe if you actually got to know her
+                you'll find out shes a really helpful sweet girl with a good
+                taste in computer games? *I don't know, I've never got this far.
+              </p>
+              <p>Also typical for SQL:</p>
+              <ul>
+                <li>A true definition of picky eater.</li>
+                <li>
+                  Games at night, sleeps at day and survives on energy drinks
+                </li>
+                <li>
+                  At her home she'll serve you frozen food you'll need to heat
+                  up yourself.
+                </li>
+                <li>
+                  At the group work she'll make the whole presentation herself
+                  because she's sure noone can make it as good as her
+                </li>
+              </ul>
+            </div>
+            <div class="langimg">
+              <figure>
+                <img src="./img/cppfull.jpg" alt="" />
+              </figure>
+            </div>
+          </section>
+
+          <footer class="article_footer">
+            <hr />
+            <section id="testing">
+              <h1 class="title">BUT WAIT A MINUTE... WHO ARE YOU?</h1>
+              <p>
+                You want to know which of the six people presented here
+                resembles you the most?
+                <br />Then take a test, answer honesly and prepate to meet your
+                programming language-self. <br />Have fun!
+              </p>
+              <a href="./test.html" id="button">
+                <span>TAKE A TEST</span>
+              </a>
+            </section>
+          </footer>
+        </article>
+      </div>
     </main>
 
-    <footer>
+    <footer class="page_footer">
       <p class="copyright">
         <strong>TECHKNUTTAR</strong> by <a href="">Anna Duras</a>. <br />
         The source code is licensed

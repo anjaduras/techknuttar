@@ -247,3 +247,43 @@ header,
 footer {
   background-color: black;
 }
+
+/* IMPORTANT: THIS IS FOR THE SWITCHES */
+.content-tab {
+    display: none;
+  }
+  
+  .content-tab.active {
+    display: block;
+  }
+  
+  .settings a:last-child {
+    margin-left: 2em;
+  }
+  
+  .hero { text-align: center; display: block; margin: 0 auto; max-width: 45ch;}
+  .site-title {font-size: 250%; font-weight: bold;}
+  .title-meaning {font-size: 110%; font-weight: normal; font-style: italic; margin-top: 1em; margin-bottom: 2em;}
+  .site-idea {font-size: 125%; font-weight: normal; font-style: normal; margin-top: 2em; }
+  
+  
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode a {
+    color: #80cbc4;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+  }
+
