@@ -1,0 +1,57 @@
+TECHKNUTTAR
+schwedisches Begriff für "Techniker".
+Wie sähen Programmiersprachen aus, wenn es sich um ganz normale Menschen handeln würde?
+
+Hallo zusammen!
+Personalisierung ist ein beliebtes Hobby von Künstlern, Filmemachern und Designern. Wir stellen uns gerne vor, was für Menschen wir essen, welche Farben wir verwenden, welche sozialen Medien wir nutzen und so weiter.
+Um meine Liebe zur Kunst und zum Programmieren zu verbinden, möchte ich euch verschiedene Programmiersprachen vorstellen, die ich bei der Umsetzung der von mir entworfenen Figuren ausprobiert habe.
+
+HTML & CSS
+Ein klassisches High-School-Paar. HTML (sein Name ist wahrscheinlich Henry oder so ähnlich), der klassische Typ, der seine Freizeit mit Lesen oder manchmal mit Gesprächen über Philosophie verbringt, und CSS (ich glaube, ihr Name ist Casey) mit ihrer Golden-Retriever-Persönlichkeit und ihren ständig neuen Hobbys gleichen sich auf eine Art und Weise aus, wie es kein anderes Paar kann.
+
+Auch das ist typisch für sie:
+Sie sind kein extrovertiertes Paar: Freitagabende sind Tage mit Netflix und Entspannung.
+HTML kleidet sich nur in H&M (ironischerweise) oder Zara
+CSS kocht gerne und macht oft Unordnung in der Küche, die HTML dann aufräumen muss
+Sie planen, sich ein Haustier anzuschaffen, aber CSS möchte eine Katze, während HTML einen Labrador möchte.
+
+JAVA SCRIPT
+Die Person, deren Musik so laut ist, dass man sie durch ihre Kopfhörer hören kann. Sie sind beliebt in den sozialen Medien, ein echter Trendsetter, aber auch schwierig zu kommunizieren - obwohl sie sehr witzig und interessant sind, kühlen sie schnell ab und sind völlig unbeständig.
+
+Ebenfalls typisch für sie:
+Sie färben sich alle drei Wochen die Haare (Ramona Flowers-Referenz!)
+Sie lieben Second-Hand-Läden und Schaufensterbummel
+Sie korrigieren Sie, wenn Sie ein falsches Pronomen verwenden (aggressiv)
+Sie sind mit CSS befreundet und konkurrieren mit Python
+
+PYTHON
+Die Art von Mann, mit dem man sofort befreundet sein möchte. Man kann sich sehr gut mit ihm unterhalten, er ist ein meisterhafter Problemlöser und es macht einfach Spaß, mit ihm zusammen zu sein. In meiner Welt heißt er höchstwahrscheinlich James oder Brian und hat immer seine gesamte Ausrüstung dabei und sieht dabei irgendwie immer noch cool aus.
+
+Auch typisch für sie:
+Er ist mit allen befreundet und spricht mehrere Sprachen
+Minimalist und qualitätsorientiert: Wenn er eine gute Schriftrolle findet, kauft er wahrscheinlich 6 weitere, um sie jeden Tag zu tragen
+Er hat eine perfekte Handschrift
+Er ist sehr offen und vertritt immer seine Meinung
+
+SQL
+Ein echtes Beispiel für eine Chefin. Sie ist so sehr auf Details fixiert, dass es anfangs überwältigend sein kann, aber auch sehr professionell und zuverlässig. SQL arbeitet ständig und übernimmt trotzdem immer noch neue Aufgaben. Wenn du also mit ihr ausgehen möchtest, wirst du wahrscheinlich um ihre Freizeit in 5 Wochenkonkurrieren. Es könnte allerdings schwierig sein, ihr Interesse zu wecken, da sie nur mit Excel ausgeht.
+
+Ebenfalls typisch für sie:
+Nicht sehr kreativ, aber unschlagbar in Mathe
+Hört zum Vergnügen Opern
+Sortiert alles nach Farben
+Reagiert schnell - sie antwortet wahrscheinlich sofort auf Nachrichten, auch wenn sie sehr beschäftigt ist.
+
+C++
+Ein mystisches, ruhiges Mitglied der Gruppe. Die Figur, die mir am ehesten einfällt, ist L aus Death Note - snur dass C++ ein Mädchen ist und Diabetes hat. Viele Leute haben Angst vor ihr oder lästern über sie (wie auch über alle anderen Mitglieder der C-Familie). Aber wenn man sie wirklich kennen würde, würde man vielleicht herausfinden, dass sie ein wirklich offenes, sensibles Mädchen mit einem guten Geschmack für Computerspiele ist? *Ich weiß nicht, ich habe es noch nie so weit geschafft.
+
+Ebenfalls typisch für sie:
+ist extrem wählerisch, was das Essen angeht
+spielt nachts, schläft tagsüber und ernährt sich von Energiegetränke
+Bei ihr zu Hause bietet sie dir Tiefkühlkost an, die du selbst aufwärmen musst.
+Bei der Teamarbeit macht sie die ganze Präsentation selbst, weil sie sich sicher ist, dass es niemand besser machen kann.
+
+ABER WARTE... WER BIST DU?
+Willst du wissen, welcher der sechs Charaktere dir am ähnlichsten ist?
+Dann mach den Test, antworte ehrlich und mach dich bereit, deine Programmierpersönlichkeit kennenzulernen. Viel Glück!
+MACHE DEN TEST

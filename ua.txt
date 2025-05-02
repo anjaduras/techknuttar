@@ -43,28 +43,15 @@ SQL
 Швидко відповідає - вона скоріш за все відповість на повідомлення негайно, навіть при надзвичайному обсязі роботи.
 
 C++
-Містична, тиха дівчина в компанії. Найближчий персонаж за характером, якого я згадала, це L зі Зошиту Смерті - тільки C++ дівчина та має діабет. Багато людей бояться її або пліткують (як і про всіх інших членів сім'ї С) 
- <h2>C++</h2>
-            <p>
-              The mystical, quiet one of the group. The closest figure that
-              comes to mind in terms of personality is L from Death Note -
-              except C++ is a girl and diabetic. Lots of people are scared of
-              her or talking behind her back (the same goes to all of the
-              members of C family). But maybe if you actually got to know her
-              you'll find out shes a really helpful sweet girl with a good taste
-              in computer games? *I don't know, I've never got this far.
-            </p>
-            <p>Also typical for SQL:</p>
-            <ul>
-              <li>A true definition of picky eater.</li>
-              <li>
-                Games at night, sleeps at day and survives on energy drinks
-              </li>
-              <li>
-                At her home she'll serve you frozen food you'll need to heat up
-                yourself.
-              </li>
-              <li>
-                At the group work she'll make the whole presentation herself
-                because she's sure noone can make it as good as her
-              </li>
+Містична, тиха дівчина в компанії. Найближчий персонаж за характером, якого я згадала, це L зі Зошиту Смерті - тільки C++ дівчина та має діабет. Багато людей бояться її або пліткують (як і про всіх інших членів сім'ї С). Але може якби ви справді познайомилися з нею, ви б дізналися що вона справді вікрита чуйна дівчина з гарним смаком у компьютерних іграх? *Я не знаю, я ніколи не діставалася так далеко.
+
+Також типово для них:
+Достобіса перебірлива в їжі
+Грає вночі, спить вдень і виживає на енергетиках
+В неї вдома вона запропонує тобі заморожену їжу, яку ти маєш власноруч розігріти.
+В командній роботі вона зробить усю презентацію сама, тому що вона впевнена що ніхто не може зробити її краще.
+
+АЛЕ СТРИВАЙ... ХТО ТИ?
+Ти хочеш дізнатися хто з шести персонажів найбільш схожий на тебе?
+Тоді пройди тест, відповідай чесно і приготуйся до зустрічі зі свою програмувальною особистістю. Щасти!
+ПРОЙТИ ТЕСТ
