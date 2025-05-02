@@ -638,3 +638,30 @@ INDEX TEXTS AND STUFF
     </footer>
   </body>
 </html>
+
+
+        <div class="lang-container">
+          <h1>Seiteninhalt auf Deutsch</h1>
+
+          <ul>
+            <li>
+              Ä - <strong>&amp;Auml;</strong> or <strong>&amp;#196;</strong>
+            </li>
+            <li>
+              ä - <strong>&amp;auml;</strong> or <strong>&amp;#228;</strong>
+            </li>
+            <li>
+              Ü - <strong>&amp;Uuml;</strong> or <strong>&amp;#220;</strong>
+            </li>
+            <li>
+              ü - <strong>&amp;uuml;</strong> or <strong>&amp;#252;</strong>
+            </li>
+            <li>
+              Ö - <strong>&amp;Ouml;</strong> or <strong>&amp;#214;</strong>
+            </li>
+            <li>
+              ö - <strong> &amp;ouml;</strong> or <strong>&amp;#246;</strong>
+            </li>
+            <li>ß - <strong>&amp;#223; </strong></li>
+          </ul>
+        </div>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Site · Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      h1,
+      footer,
+      nav,
+      ul,
+      .lang-container {
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+        margin-left: -45px;
+      }
+      strong {
+        color: #a11;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sitename</h1>
+      <nav>
+        <a class="tab active" onclick="openTab(event,'german')">🇩🇪</a>
+        <a class="tab" onclick="openTab(event,'ukrainian')">🇺🇦</a>
+        <a class="tab" onclick="openTab(event,'english')">🇬🇧</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-tab" id="german">
+        <div class="lang-container"><h1>Seiteninhalt in Deutsch</h1></div>
+      </div>
+
+      <div class="content-tab" id="english">
+        <div class="lang-container"><h1>Site content in English</h1></div>
+      </div>
+
+      <div class="content-tab" id="ukrainian">
+        <div class="lang-container">
+          <h1>Контент сайту українською мовою</h1>
+        </div>
+      </div>
+    </main>
+
+    <footer>©</footer>
+
+    <script>
+      document.querySelectorAll(".content-tab").forEach((tab) => {
+        tab.style.display = "none";
+      });
+      document.getElementById("german").style.display = "block";
+
+      function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
