@@ -227,3 +227,172 @@
     </footer>
   </body>
 </html>
+
+
+!!!!
+
+/* images styling */
+figure {
+  margin: 0 0 1rem;
+}
+figure img {
+  max-width: 400px;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+/* form styling */
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#button {
+  padding: 1rem;
+  text-transform: none;
+  text-decoration: none;
+  max-width: 300px;
+  font-size: 150%;
+  background-color: black;
+  border-radius: 10%;
+  color: #fff;
+  font-family: "Workbench", sans-serif;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+output {
+  display: inline-block;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.langdesc {
+}
+.langimg {
+  text-align: center;
+}
+.copyright {
+  font-size: 80%;
+  opacity: 0.7;
+  text-align: center;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.settings {
+  text-align: right;
+}
+.settings a {
+  text-decoration: none;
+  padding: 0.3em;
+}
+
+#testing {
+  text-align: center;
+}
+
+#brandname {
+  font-size: 200%;
+}
+
+hgroup {
+  text-align: center;
+  padding: 3em;
+  padding-bottom: 1em;
+}
+
+#pagelinks {
+  text-align: center;
+}
+#pagelinks a {
+  color: #bcbcbc;
+}
+
+header,
+footer {
+  background-color: black;
+}
+
+/* IMPORTANT: THIS IS FOR THE LANGUAGE SWITCHES */
+.content-tab {
+  display: none;
+}
+
+.content-tab.active {
+  display: block;
+}
+
+.settings a:last-child {
+  margin-left: 2em;
+}
+
+/* HEROOOOOOOO */
+/* 
+.hero {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 45ch;
+}
+
+.subtitle {
+  font-size: 110%;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.definition {
+  font-size: 125%;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 2em;
+} */
+
+/* STYLES OF DARK SIDE */
+
+body {
+  background: white;
+  color: black;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #80cbc4;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}

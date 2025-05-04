@@ -1,5 +1,5 @@
 /* fonts are always imported first */
-@import url("https://fonts.googleapis.com/css2?family=VT323&family=Workbench&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Overpass+Mono:wght@300..700&display=swap');
 
 /* styles for pseudo-elements (UNICODE-icons) */
 *,
@@ -21,7 +21,7 @@ html {
 
 /* works for the whole website */
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Overpass Mono", monospace;
   padding: 1em;
   line-height: 1.6;
   color: #bcbcbc;
@@ -59,21 +59,19 @@ main {
 }
 
 /* works for ALL headers */
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   margin: 1.2rem 0 1.2rem 0;
-  font-family: "Workbench", sans-serif;
   color: limegreen;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.2;
 }
 
 h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 120%;
 }
 h2 {
   font-size: calc(1.325rem + 0.9vw);
@@ -91,10 +89,15 @@ h6 {
   font-size: 1rem;
 }
 
-p,
-li {
-  font-family: "VT323", monospace;
-  font-size: 1rem;
+.title {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
 }
 
 /* basic styles for all lists */
@@ -117,13 +120,6 @@ ul ol {
   margin-bottom: 0;
 }
 
-/* highlights in the text */
-mark {
-  padding: 0.1875em;
-  color: black;
-  background-color: rgba(255, 255, 0, 0.482);
-}
-
 /* link styles */
 a {
   color: blue;
@@ -141,115 +137,116 @@ a:not([href]):not([class]):hover {
 
 /* images styling */
 figure {
-  margin: 0 0 1rem;
-}
-figure img {
-  max-width: 400px;
-  height: auto;
-  display: inline-block;
-  margin: 0 auto;
-  vertical-align: middle;
-}
-
-/* form styling */
-button {
-  border-radius: 0;
-}
-
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-
-input,
-button,
-select,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-#button {
-  padding: 1rem;
-  text-transform: none;
-  text-decoration: none;
-  max-width: 300px;
-  font-size: 150%;
-  background-color: black;
-  border-radius: 10%;
-  color: #fff;
-  font-family: "Workbench", sans-serif;
-}
-
-textarea {
-  resize: vertical;
-}
-
-fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-output {
-  display: inline-block;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-.langdesc {
-}
-.langimg {
-  text-align: center;
-}
-.copyright {
-  font-size: 80%;
-  opacity: 0.7;
-  text-align: center;
-  max-width: 50ch;
-  margin: 0 auto;
-}
-
-.settings {
-  text-align: right;
-}
-.settings a {
-  text-decoration: none;
-  padding: 0.3em;
-}
-
-#testing {
-  text-align: center;
-}
-
-#brandname {
-  font-size: 200%;
-}
-
-hgroup {
-  text-align: center;
-  padding: 3em;
-  padding-bottom: 1em;
-}
-
-#pagelinks {
-  text-align: center;
-}
-#pagelinks a {
-  color: #bcbcbc;
-}
-
-header,
-footer {
-  background-color: black;
-}
-
-/* IMPORTANT: THIS IS FOR THE SWITCHES */
-.content-tab {
+    margin: 0 0 1rem;
+  }
+  figure img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+  
+  /* form styling */
+  button {
+    border-radius: 0;
+  }
+  
+  button:focus:not(:focus-visible) {
+    outline: 0;
+  }
+  
+  input,
+  button,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  #button {
+    padding: 1rem;
+    text-transform: none;
+    text-decoration: none;
+    max-width: 300px;
+    font-size: 150%;
+    background-color: black;
+    border-radius: 10%;
+    color: #fff;
+    font-family: "Workbench", sans-serif;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  output {
+    display: inline-block;
+  }
+  
+  [hidden] {
+    display: none !important;
+  }
+  
+  .langdesc {
+  }
+  .langimg {
+    text-align: center;
+  }
+  .copyright {
+    font-size: 80%;
+    opacity: 0.7;
+    text-align: center;
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+  
+  .settings {
+    text-align: right;
+  }
+  .settings a {
+    text-decoration: none;
+    padding: 0.3em;
+  }
+  
+  #testing {
+    text-align: center;
+  }
+  
+  #brandname {
+    font-size: 200%;
+  }
+  
+  hgroup {
+    text-align: center;
+    padding: 3em;
+    padding-bottom: 1em;
+  }
+  
+  #pagelinks {
+    text-align: center;
+  }
+  #pagelinks a {
+    color: #bcbcbc;
+  }
+  
+  header,
+  footer {
+    background-color: black;
+  }
+  
+  /* IMPORTANT: THIS IS FOR THE LANGUAGE SWITCHES */
+  .content-tab {
     display: none;
   }
   
@@ -261,12 +258,30 @@ footer {
     margin-left: 2em;
   }
   
-  .hero { text-align: center; display: block; margin: 0 auto; max-width: 45ch;}
-  .site-title {font-size: 250%; font-weight: bold;}
-  .title-meaning {font-size: 110%; font-weight: normal; font-style: italic; margin-top: 1em; margin-bottom: 2em;}
-  .site-idea {font-size: 125%; font-weight: normal; font-style: normal; margin-top: 2em; }
+  /* HEROOOOOOOO */
+  /* 
+  .hero {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 45ch;
+  }
   
+  .subtitle {
+    font-size: 110%;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .definition {
+    font-size: 125%;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 2em;
+  } */
   
+  /* STYLES OF DARK SIDE */
   
   body {
     background: white;
@@ -286,4 +301,3 @@ footer {
   body.dark-mode footer {
     background-color: #1e1e1e;
   }
-
