@@ -1,86 +1,179 @@
-// List of your 6 characters
-const characters = ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'CPP', 'SQL'];
+const characters = ["HTML", "CSS", "JS", "PYTHON", "SQL", "CPP"];
+const points = Object.fromEntries(characters.map(c => [c, 0]));
 
-// Initialize score object
-let scores = {
-    HTML: 0,
-    CSS: 0,
-    JAVASCRIPT: 0,
-    PYTHON: 0,
-    CPP: 0,
-    SQL: 0
+const characterInfo = {
+  HTML: {
+    description: "You are the structure behind everything — reliable, foundational, and essential.",
+    image: "images/html.png"
+  },
+  CSS: {
+    description: "You're all about aesthetics and presentation — stylish and expressive.",
+    image: "images/css.png"
+  },
+  JS: {
+    description: "Dynamic and creative, you're quick-thinking and love interaction.",
+    image: "images/js.png"
+  },
+  PYTHON: {
+    description: "Logical, clear, and versatile — you're a problem solver at heart.",
+    image: "images/python.png"
+  },
+  SQL: {
+    description: "You're organized, methodical, and always know where things belong.",
+    image: "images/sql.png"
+  },
+  CPP: {
+    description: "Powerful and efficient, you dive deep into complex problems.",
+    image: "images/cpp.png"
+  }
 };
 
-// Example question structure
+
 const questions = [
   {
-    text: "Choose a music band:",
-    answers: [
-      { text: "Anything with fonk", character: "CPP" },
-      { text: "Tyler the Creator", character: "JAVASCRIPT" },
-      { text: "Frank Sinatra", character: "HTML" },
-      { text: "Fleetwood Mac", character: "CSS" },
-      { text: "Thom Yorke", character: "PYTHON" },
-      { text: "Men At Work", character: "SQL" }
+    q: "1. Choose your go-to summer drink:", a: [
+      { label: "Mohito", value: ["JS"] },
+      { label: "Sparkling water", value: ["SQL"] },
+      { label: "Orange juice", value: ["PYTHON"] }
     ]
   },
   {
-    text: "Choose your go-to summer drink:",
-    answers: [
-      { text: "Mohito", character: "JAVASCRIPT" },
-      { text: "Sparkling water", character: "SQL" },
-      { text: "Orange juice", character: "PYTHON" }
+    q: "2. Which school subject of these do you like the most?", a: [
+      { label: "History", value: ["HTML"] },
+      { label: "Chemistry", value: ["CSS"] },
+      { label: "Math", value: ["CPP"] }
     ]
   },
   {
-    text: "Which school subject of these do you like the most?",
-    answers: [
-      { text: "History", character: "JAVASCRIPT" },
-      { text: "Chemistry", character: "CSS" },
-      { text: "Math", character: "CPP" }
+    q: "3. Do you like change?", a: [
+      { label: "Yes", value: ["JS"] },
+      { label: "No", value: ["SQL"] },
+      { label: "Can adjust", value: ["PYTHON"] }
     ]
   },
   {
-    text: "Do you like change?",
-    answers: [
-      { text: "Yes", character: "JAVASCRIPT" },
-      { text: "No", character: "SQL" },
-      { text: "Can adapt", character: "PYTHON" }
+    q: "4. Choose your weekend plan:", a: [
+      { label: "Book club", value: ["HTML"] },
+      { label: "Gaming event", value: ["CPP"] },
+      { label: "Planning the next week", value: ["SQL"] }
     ]
   },
   {
-    text: "Choose your weekend plan:",
-    answers: [
-      { text: "Book club", character: "HTML" },
-      { text: "Gaming event", character: "CPP" },
-      { text: "Planning the next week", character: "SQL" }
+    q: "5. Choose a bird:", a: [
+      { label: "Peacock", value: ["CSS"] },
+      { label: "Crow", value: ["HTML"] },
+      { label: "Parrot", value: ["JS"] }
     ]
   },
   {
-    text: "Choose a bird:",
-    answers: [
-      { text: "Peacock", character: "CSS" },
-      { text: "Crow", character: "HTML" },
-      { text: "Parrot", character: "JAVASCRIPT" }
+    q: "6. Which Twin Peaks quote sounds the best right now?", a: [
+      { label: "I feel like I know her... but sometimes my arms bend back.", value: ["CPP"] },
+      { label: "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night.", value: ["CSS"] },
+      { label: "Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.", value: ["PYTHON"] }
     ]
   },
   {
-    text: "Which Twin Peaks quote sounds the best right now?",
-    answers: [
-      { text: "Laura Palmer: I feel like I know her... but sometimes my arms bend back.", character: "CPP" },
-      { text: "Chemistry", character: "CSS" },
-      { text: "Math", character: "CPP" }
+    q: "7. Did you lie during the test?", a: [
+      { label: "Yes", value: ["JS"] },
+      { label: "No", value: ["PYTHON"] },
+      { label: "Won't tell", value: ["CPP"] }
     ]
   },
+  {
+    q: "8. The day before going on the trip, what are you most concerned about?", a: [
+      { label: "Making sure you have the best outfits", value: ["CSS"] },
+      { label: "Cheching the plan to make sure you'll see all the important places", value: ["HTML"] },
+      { label: "Checking if the tickets/bookings information is correct", value: ["SQL"] }
+    ]
+  },
+  {
+    q: "9. Choose a music band:", a: [
+      { label: "Anything with fonk", value: ["CPP"] },
+      { label: "Tyler the Creator", value: ["JS"] },
+      { label: "Frank Sinatra", value: ["HTML"] },
+      { label: "Fleetwood Mac", value: ["CSS"] },
+      { label: "Thom Yorke", value: ["PYTHON"] },
+      { label: "Men At Work", value: ["SQL"] }
+    ]
+  }
 ];
 
-// Function to record a user's answer
-function selectAnswer(character) {
-  scores[character]++;
-}
 
-// Example of final result
-function getResult() {
-  let topCharacter = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
-  return `You are most like: ${topCharacter}`;
-}
+const questionsDiv = document.getElementById("questions");
+let currentQuestion = 0;
+let quizFinished = false;
+
+
+// Render questions
+questions.forEach((q, i) => {
+  const div = document.createElement("div");
+  div.className = "question";
+  if (i === 0) div.classList.add("active");
+  div.innerHTML = `<p>Q${i + 1}: ${q.q}</p>`;
+  q.a.forEach((answer, j) => {
+    const value = answer.value.join(",");
+    div.innerHTML += `
+<label>
+  <input type="radio" name="q${i}" value="${value}" />
+  ${answer.label}
+</label><br/>
+`;
+  });
+
+  questionsDiv.appendChild(div);
+});
+
+const nextBtn = document.getElementById("nextBtn");
+const submitBtn = document.getElementById("submitBtn");
+
+// Enable Next button on answer
+questionsDiv.addEventListener("change", () => {
+  nextBtn.disabled = false;
+});
+
+nextBtn.addEventListener("click", () => {
+  const currentDiv = document.querySelectorAll(".question")[currentQuestion];
+  currentDiv.classList.remove("active");
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    document.querySelectorAll(".question")[currentQuestion].classList.add("active");
+    nextBtn.disabled = true;
+
+    if (currentQuestion === questions.length - 1) {
+      nextBtn.style.display = "none";
+      submitBtn.style.display = "inline-block";
+    }
+  }
+});
+
+document.getElementById("quizForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  Object.keys(points).forEach(key => points[key] = 0);
+
+  questions.forEach((_, i) => {
+    const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
+    answer.split(",").forEach(char => {
+      if (points[char] !== undefined) {
+        points[char]++;
+      }
+    });
+  });
+
+  const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
+  const info = characterInfo[topChar[0]];
+
+  quizFinished = true; // <--- add this
+
+  document.getElementById("quizForm").style.display = "none";
+  document.getElementById("progressContainer").style.display = "none";
+
+  // Show result only
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `
+<h2>Your character is: ${topChar[0]}</h2>
+<p>${info.description}</p>
+<img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px; margin-top: 10px;" />
+`;
+});

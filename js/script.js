@@ -32,3 +32,31 @@ function openTab(evt, tabName) {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
   
+  // Progress 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.createElement("div");
+    progressBar.id = "progressBarContainer";
+    progressBar.innerHTML = `
+      <div id="progressBarInner"></div>
+    `;
+    document.body.insertBefore(progressBar, document.getElementById("quizForm"));
+  
+    const totalQuestions = document.querySelectorAll(".question").length;
+    const progressInner = document.getElementById("progressBarInner");
+  
+    function updateProgress(currentIndex) {
+      const percent = Math.round((currentIndex / totalQuestions) * 100);
+      progressInner.style.width = `${percent}%`;
+    }
+  
+    // Hook into your existing logic
+    const originalNext = nextBtn.onclick;
+    nextBtn.onclick = () => {
+      updateProgress(currentQuestion + 1);
+      originalNext();
+    };
+  
+    updateProgress(1); // start at question 1
+  });
+  
