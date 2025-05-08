@@ -1,5 +1,6 @@
 /* fonts are always imported first */
-@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Overpass+Mono:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Share+Tech+Mono&family=Silkscreen&display=swap');
+
 
 /* styles for pseudo-elements (UNICODE-icons) */
 *,
@@ -11,18 +12,19 @@
 html,
 body {
   height: 100%;
+  margin: 0%;
+  padding: 0%;
 }
 
 html {
   box-sizing: border-box;
-  font-size: min(max(1rem, 4vw), 24px);
+  font-size: min(max(1rem, 4vw), 20px);
   height: 100%;
 }
 
 /* works for the whole website */
 body {
-  font-family: "Overpass Mono", monospace;
-  padding: 1em;
+  font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
   color: #bcbcbc;
   text-align: left;
@@ -37,13 +39,7 @@ main {
   flex-grow: 1;
 }
 
-header,
-footer,
-main {
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-}
+
 
 .grid {
   display: grid;
@@ -68,6 +64,7 @@ h6 {
   color: limegreen;
   font-weight: 800;
   line-height: 1.2;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 h1 {
@@ -90,7 +87,7 @@ h6 {
 }
 
 .title {
-    font-family: "Nabla", system-ui;
+  font-family: 'Silkscreen', monospace;
     font-optical-sizing: auto;
     text-align: center;
     font-weight: 400;
@@ -238,11 +235,6 @@ figure {
   }
   #pagelinks a {
     color: #bcbcbc;
-  }
-  
-  header,
-  footer {
-    background-color: black;
   }
   
   /* IMPORTANT: THIS IS FOR THE LANGUAGE SWITCHES */
