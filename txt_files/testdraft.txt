@@ -32,11 +32,6 @@ Planning the next week - SQL3
 Peacock - CSS3
 Crow - HTML4
 Parrot - JS3
----------------------------
-7 Choose a weather:
-Cloudy, perfect temperature - HTML3
-Full sun, hot and preferably a raibow too - CSS 4
-Rainy, wont mind a thunder - CPP 4
 ---------------------------------
 8 Which Twin Peaks quote sounds the best right now?
 CPP5 - Laura Palmer: I feel like I know her... but sometimes my arms bend back.
