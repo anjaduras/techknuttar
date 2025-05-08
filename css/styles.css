@@ -91,11 +91,13 @@ h6 {
 }
 
 #logoTitle {
-  font-size: 100px;
+  font-size: clamp(2rem, 10vw, 5rem); /* Responsive font sizing */
   font-weight: 600;
   color: #e6d40a;
   display: inline-block;
   font-family: 'Silkscreen', monospace;
+  word-break: break-word;
+  text-align: center;
 }
 
 /* basic styles for all lists */
