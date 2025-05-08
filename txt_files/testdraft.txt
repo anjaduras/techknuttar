@@ -44,44 +44,5 @@ No- Python5
 Wont tell - CPP5
 ---------------------------
 
-HTML
-1 Weekend plan - book club
-2 Frank Sinatra
-3 No clouds, no heat eather
-4 Bird - Crow
-5 Likes history
-
-CSS
-1 Bird - Peacock
-2 Fleetwood Mac
-3 Loves Chemistry
-4 Sunny rainbow
-5 "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night."
-
-JS
-1 Bird - Parrot
-2 Loves change
-3 Tyler The Creator
-4 Mohito
-5 Lied during test
-
-PY
-1 Orange juice
-2 Can adapt to change if needed
-3 Thom Yorke
-4 Quote: Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.
-5 Didnt lie during test
-
-CPP
-1 Weekend plan - Gaming festival
-2 Anything with fonk will work
-3 Wont tell if lied during test
-4 Rainy thunder
-5 Laura Palmer: I feel like I know her... but sometimes my arms bend back.
-
-SQL 
-1 Men At Work
-2 Hates change
-3 Sparkling water
-4 Loves math
-5 Planning the next week plans
+The test results are based solely on my personal opinions with no fcts included. Feel free to disagree!
+Also side note: i love all of these unconditionally and think each character you can get here is unique and cool! I encourage you to think the same way. Have fun:))

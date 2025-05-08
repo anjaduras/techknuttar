@@ -1,135 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personality Test</title>
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Share+Tech+Mono&family=Silkscreen&display=swap');
 
-body {
-  font-family: 'IBM Plex Mono', monospace;
-}
+  body {
+    font-family: 'IBM Plex Mono', monospace;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Share Tech Mono', monospace;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Share Tech Mono', monospace;
+  }
 
-.logo {
-  font-family: 'Silkscreen', monospace;
-}
+  .logo {
+    font-family: 'Silkscreen', monospace;
+  }
 
-.question { display: none; margin-bottom: 20px; }
-.active { display: block; }
-.result { margin-top: 30px; font-weight: bold; font-family: 'Silkscreen', monospace; }
+  .question {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .result {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Silkscreen', monospace;
+  }
 </style>
+
 <body>
   <h1>Personality Test</h1>
   <form id="quizForm">
     <div id="questions"></div>
-  
+
     <div id="progressContainer">
       <div id="progressBar"></div>
     </div>
-  
+
     <button type="button" id="nextBtn" disabled>Next</button>
     <button type="submit" id="submitBtn" style="display: none;">Get Result</button>
   </form>
-  
-  
+
+
   <div class="result" id="result"></div>
 
   <script>
     const characters = ["HTML", "CSS", "JS", "PYTHON", "SQL", "CPP"];
     const points = Object.fromEntries(characters.map(c => [c, 0]));
-    
+
     const characterInfo = {
-    HTML: {
-      description: "You are the structure behind everything — reliable, foundational, and essential.",
-      image: "images/html.png"
-    },
-    CSS: {
-      description: "You're all about aesthetics and presentation — stylish and expressive.",
-      image: "images/css.png"
-    },
-    JS: {
-      description: "Dynamic and creative, you're quick-thinking and love interaction.",
-      image: "images/js.png"
-    },
-    PYTHON: {
-      description: "Logical, clear, and versatile — you're a problem solver at heart.",
-      image: "images/python.png"
-    },
-    SQL: {
-      description: "You're organized, methodical, and always know where things belong.",
-      image: "images/sql.png"
-    },
-    CPP: {
-      description: "Powerful and efficient, you dive deep into complex problems.",
-      image: "images/cpp.png"
-    }
-  };
+      HTML: {
+        description: "You are the structure behind everything — reliable, foundational, and essential.",
+        image: "images/html.png"
+      },
+      CSS: {
+        description: "You're all about aesthetics and presentation — stylish and expressive.",
+        image: "images/css.png"
+      },
+      JS: {
+        description: "Dynamic and creative, you're quick-thinking and love interaction.",
+        image: "images/js.png"
+      },
+      PYTHON: {
+        description: "Logical, clear, and versatile — you're a problem solver at heart.",
+        image: "images/python.png"
+      },
+      SQL: {
+        description: "You're organized, methodical, and always know where things belong.",
+        image: "images/sql.png"
+      },
+      CPP: {
+        description: "Powerful and efficient, you dive deep into complex problems.",
+        image: "images/cpp.png"
+      }
+    };
 
 
     const questions = [
-      { q: "Pick a color:", a: [
-          { label: "Red", value: ["HTML"] },
-          { label: "Blue", value: ["CSS"] },
-          { label: "Green", value: ["JS"] }
-        ] 
+      {
+        q: "1. Choose your go-to summer drink:", a: [
+          { label: "Mohito", value: ["JS"] },
+          { label: "Sparkling water", value: ["SQL"] },
+          { label: "Orange juice", value: ["PYTHON"] }
+        ]
       },
-      { q: "Choose a hobby:", a: [
-          { label: "Reading", value: ["PYTHON"] },
-          { label: "Hiking", value: ["SQL"] },
-          { label: "Gaming", value: ["CPP"] }
-        ] 
+      {
+        q: "2. Which school subject of these do you like the most?", a: [
+          { label: "History", value: ["HTML"] },
+          { label: "Chemistry", value: ["CSS"] },
+          { label: "Math", value: ["CPP"] }
+        ]
       },
-      { q: "Pick a time of day:", a: [
-          { label: "Morning", value: ["HTML"] },
-          { label: "Evening", value: ["PYTHON"] },
-          { label: "Night", value: ["CPP"] }
-        ] 
+      {
+        q: "3. Do you like change?", a: [
+          { label: "Yes", value: ["JS"] },
+          { label: "No", value: ["SQL"] },
+          { label: "Can adjust", value: ["PYTHON"] }
+        ]
       },
-      { q: "Choose a trait:", a: [
-          { label: "Logical", value: ["CSS"] },
-          { label: "Creative", value: ["JS"] },
-          { label: "Empathetic", value: ["SQL"] }
-        ] 
+      {
+        q: "4. Choose your weekend plan:", a: [
+          { label: "Book club", value: ["HTML"] },
+          { label: "Gaming event", value: ["CPP"] },
+          { label: "Planning the next week", value: ["SQL"] }
+        ]
       },
-      { q: "Favorite season?", a: [
-          { label: "Summer", value: ["HTML"] },
-          { label: "Autumn", value: ["JS"] },
-          { label: "Winter", value: ["SQL"] }
-        ] 
+      {
+        q: "5. Choose a bird:", a: [
+          { label: "Peacock", value: ["CSS"] },
+          { label: "Crow", value: ["HTML"] },
+          { label: "Parrot", value: ["JS"] }
+        ]
       },
-      { q: "Ideal vacation?", a: [
-          { label: "City adventure", value: ["CSS"] },
-          { label: "Mountain hike", value: ["PYTHON"] },
-          { label: "Beach chill", value: ["CPP"] }
-        ] 
+      {
+        q: "6. Which Twin Peaks quote sounds the best right now?", a: [
+          { label: "I feel like I know her... but sometimes my arms bend back.", value: ["CPP"] },
+          { label: "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night.", value: ["CSS"] },
+          { label: "Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.", value: ["PYTHON"] }
+        ]
       },
-      { q: "Pick a pet:", a: [
-          { label: "Cat", value: ["JS"] },
-          { label: "Dog", value: ["SQL"] },
-          { label: "Bird", value: ["HTML"] }
-        ] 
+      {
+        q: "7. Did you lie during the test?", a: [
+          { label: "Yes", value: ["JS"] },
+          { label: "No", value: ["PYTHON"] },
+          { label: "Won't tell", value: ["CPP"] }
+        ]
       },
-      { q: "Best describes you:", a: [
-          { label: "Free-spirited", value: ["CPP"] },
-          { label: "Focused", value: ["PYTHON"] },
-          { label: "Caring", value: ["CSS"] }
-        ] 
+      {
+        q: "8. The day before going on the trip, what are you most concerned about?", a: [
+          { label: "Making sure you have the best outfits", value: ["CSS"] },
+          { label: "Cheching the plan to make sure you'll see all the important places", value: ["HTML"] },
+          { label: "Checking if the tickets/bookings information is correct", value: ["SQL"] }
+        ]
       },
-      { q: "Pick one:", a: [
-          { label: "Strategy", value: ["HTML"] },
-          { label: "Support", value: ["CSS"] },
-          { label: "Chaos", value: ["JS"] },
-          { label: "Discipline", value: ["PYTHON"] },
-          { label: "Compassion", value: ["SQL"] },
-          { label: "Mystery", value: ["CPP"] }
-        ] 
+      {
+        q: "9. Choose a music band:", a: [
+          { label: "Anything with fonk", value: ["CPP"] },
+          { label: "Tyler the Creator", value: ["JS"] },
+          { label: "Frank Sinatra", value: ["HTML"] },
+          { label: "Fleetwood Mac", value: ["CSS"] },
+          { label: "Thom Yorke", value: ["PYTHON"] },
+          { label: "Men At Work", value: ["SQL"] }
+        ]
       }
     ];
 
@@ -146,14 +173,14 @@ h1, h2, h3, h4, h5, h6 {
       if (i === 0) div.classList.add("active");
       div.innerHTML = `<p>Q${i + 1}: ${q.q}</p>`;
       q.a.forEach((answer, j) => {
-  const value = answer.value.join(",");
-  div.innerHTML += `
+        const value = answer.value.join(",");
+        div.innerHTML += `
     <label>
       <input type="radio" name="q${i}" value="${value}" />
       ${answer.label}
     </label><br/>
   `;
-});
+      });
 
       questionsDiv.appendChild(div);
     });
@@ -183,37 +210,38 @@ h1, h2, h3, h4, h5, h6 {
     });
 
     document.getElementById("quizForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  Object.keys(points).forEach(key => points[key] = 0);
+      e.preventDefault();
+      Object.keys(points).forEach(key => points[key] = 0);
 
-  questions.forEach((_, i) => {
-    const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
-    answer.split(",").forEach(char => {
-      if (points[char] !== undefined) {
-        points[char]++;
-      }
-    });
-  });
+      questions.forEach((_, i) => {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
+        answer.split(",").forEach(char => {
+          if (points[char] !== undefined) {
+            points[char]++;
+          }
+        });
+      });
 
-  const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
-  const info = characterInfo[topChar[0]];
+      const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
+      const info = characterInfo[topChar[0]];
 
-  quizFinished = true; // <--- add this
+      quizFinished = true; // <--- add this
 
-document.getElementById("quizForm").style.display = "none";
-document.getElementById("progressContainer").style.display = "none";
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("progressContainer").style.display = "none";
 
-  // Show result only
-  const resultDiv = document.getElementById("result");
-  resultDiv.style.display = "block";
-  resultDiv.innerHTML = `
+      // Show result only
+      const resultDiv = document.getElementById("result");
+      resultDiv.style.display = "block";
+      resultDiv.innerHTML = `
     <h2>Your character is: ${topChar[0]}</h2>
     <p>${info.description}</p>
     <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px; margin-top: 10px;" />
   `;
-});
+    });
 
   </script>
   <script src="progress.js"></script>
 </body>
+
 </html>
