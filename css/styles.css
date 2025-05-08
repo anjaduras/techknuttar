@@ -26,9 +26,8 @@ html {
 body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
-  color: #bcbcbc;
+  color: #adadad;
   text-align: left;
-  background-color: #161616;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -161,6 +160,7 @@ textarea {
 
 #button {
   padding: 1rem;
+  font-family: 'Silkscreen', monospace;;
   text-transform: none;
   text-decoration: none;
   max-width: 300px;
@@ -209,8 +209,8 @@ fieldset {
 
 hgroup {
   text-align: center;
-  padding: 3em;
-  padding-bottom: 1em;
+  padding: 5em;
+  padding-top: 1em;
 }
 
 #pagelinks {
@@ -237,22 +237,22 @@ hgroup {
 /* STYLES OF DARK SIDE */
 
 body {
-  background: white;
-  color: black;
+  background: rgb(255, 255, 255);
+  color: #161616;
 }
 
 body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
+  background: #161616;
+  color: rgb(255, 255, 255);
 }
 
 body.dark-mode a {
-  color: #80cbc4;
+  color: #3ef2e0;
 }
 
 body.dark-mode header,
 body.dark-mode footer {
-  background-color: #1e1e1e;
+  background-color: #101010;
 }
 
 .quellen ul {
@@ -271,3 +271,7 @@ body.dark-mode footer {
 #logoTitle span:nth-child(5) { color: blue; }
 #logoTitle span:nth-child(6) { color: violet; }
 /* Adjust as needed */
+
+footer{
+  padding: 5%;
+}
