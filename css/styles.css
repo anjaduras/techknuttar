@@ -94,7 +94,7 @@ h6 {
 #logoTitle {
   font-size: 100px;
   font-weight: 600;
-  color: #e68e0a;
+  color: #e6d40a;
   display: inline-block;
   font-family: 'Silkscreen', monospace;
 }
@@ -195,6 +195,7 @@ fieldset {
 
 .settings {
   text-align: right;
+  margin: 2%;
 }
 
 .settings a {
@@ -229,7 +230,7 @@ hgroup {
   display: block;
 }
 
-.settings a:last-child {
+#theme-toggle {
   margin-left: 2em;
 }
 
@@ -260,5 +261,13 @@ body.dark-mode footer {
 }
 
 .pagecontent {
-  padding: 7%;
-}
+  padding: 10%;
+} 
+
+#logoTitle span:nth-child(1) { color: red; }
+#logoTitle span:nth-child(2) { color: orange; }
+#logoTitle span:nth-child(3) { color: #e6d40a; }
+#logoTitle span:nth-child(4) { color: limegreen; }
+#logoTitle span:nth-child(5) { color: blue; }
+#logoTitle span:nth-child(6) { color: violet; }
+/* Adjust as needed */

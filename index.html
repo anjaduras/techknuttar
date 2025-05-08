@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TECHKNUTTAR</title>
+  <title>SåDANA</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -12,36 +12,30 @@
 <body>
   <header>
     <nav class="settings">
-      <a class="tab active" onclick="openTab(event,'german')">🇩🇪</a>
+      <a class="tab" onclick="openTab(event,'german')">🇩🇪</a>
       <a class="tab" onclick="openTab(event,'ukrainian')">🇺🇦</a>
       <a class="tab" onclick="openTab(event,'english')">🇬🇧</a>
       <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>
     </nav>
-
+    <hgroup>
+      <div id="logoContainer">
+        <div id="logoTitle"></div>
+        <div id="tryAgain">🔄</div>
+      </div>
+      <p>
+        swedish for "tech geeks". <br />
+        what would coding languages be if they were just passing-by people?
+      </p>
+    </hgroup>
     <nav id="pagelinks">
-      <a href="./index.html" style="color: yellow">Home</a>
+      <a href="./index.html">Home</a>
       <a href="./links.html">Links</a>
-      <a href="./test.html">Test</a>
+      <a href="./test.html" style="color: yellow;">Test</a>
     </nav>
   </header>
-
   <main class="pagecontent">
     <!--German -->
     <div class="content-tab active" id="german">
-      <div class="hero">
-        <hgroup>
-          <div id="logoContainer">
-            <div id="logoTitle"></div>
-            <div id="tryAgain">🔄</div>
-          </div>
-          <p class="definition">Schwedisch für „Technikfreaks“.</p>
-          <p class="subtitle">
-            Wie sähen Programmiersprachen aus, wenn es sich um ganz normale
-            Menschen handeln würde?
-          </p>
-        </hgroup>
-      </div>
-
       <article>
         <h2>Hallo zusammen!</h2>
         <p>
@@ -245,23 +239,8 @@
 
       </article>
     </div>
-
     <!-- English -->
     <div class="content-tab" id="english">
-      <div class="hero">
-        <hgroup>
-          <div id="logoContainer">
-            <div id="logoTitle"></div>
-            <div id="tryAgain">🔄</div>
-          </div>
-          <p class="definition">Swedish for "tech geeks.</p>
-          <p class="subtitle">
-            What would coding languages be if they were just passing-by
-            people?
-          </p>
-        </hgroup>
-      </div>
-
       <article>
         <h2>Hello everyone!</h2>
         <p>
@@ -453,23 +432,8 @@
         </footer>
       </article>
     </div>
-
     <!-- Ukrainian -->
     <div class="content-tab" id="ukrainian">
-      <div class="hero">
-        <hgroup>
-          <div id="logoContainer">
-            <div id="logoTitle"></div>
-            <div id="tryAgain">🔄</div>
-          </div>
-          <p class="definition">шведське слово на позначення "технарів".</p>
-          <p class="subtitle">
-            ким би були мови програмування якщо б вони були простими
-            перехожими?
-          </p>
-        </hgroup>
-      </div>
-
       <article>
         <h2>Привіт усім!</h2>
         <p>
@@ -660,7 +624,7 @@
 
   <footer class="page_footer">
     <p class="copyright">
-      <strong>TECHKNUTTAR</strong> by <a href="">Anna Duras</a>. <br />
+      <strong>SåDANA</strong> by <a href="">Anna Duras</a>. <br />
       The source code is licensed
       <a href="https://opensource.org/license/mit">MIT</a>. The website
       content is licensed

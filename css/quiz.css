@@ -2,6 +2,7 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
+  text-align: center;
 }
 
 h1,
@@ -12,8 +13,6 @@ h5,
 h6 {
   font-family: 'Share Tech Mono', monospace;
 }
-
-
 
 .question {
   display: none;
@@ -46,3 +45,18 @@ h6 {
     transition: width 0.3s ease;
   }
   
+  .settings {
+    text-align: right;
+    margin: 2%;
+  }
+  
+  .settings a {
+    text-decoration: none;
+    padding: 0.3em;
+  }
+  
+  #theme-toggle {
+    margin-left: 2em;
+  }
+
+ 
