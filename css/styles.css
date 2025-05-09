@@ -161,15 +161,26 @@ textarea {
 }
 
 #button {
-  padding: 1rem;
-  font-family: 'Silkscreen', monospace;;
-  text-transform: none;
-  text-decoration: none;
-  max-width: 300px;
-  font-size: 150%;
-  background-color: black;
-  border-radius: 10%;
-  color: #fff;
+  background: #ffc400;
+	border-bottom: 10px inset rgba(0,0,0,.5);
+	border-left: 7px inset rgba(0,0,0,.5);
+	border-right: 7px inset rgba(255,255,255,.5);
+	border-top: 7px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+  font-family: 'Silkscreen', monospace;
+	margin-top: 7%;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+  &:focus,
+	&:hover,
+  &:active {
+		background: #ffae00;
+	}
 }
 
 textarea {
@@ -219,10 +230,6 @@ hgroup {
   text-align: center;
 }
 
-#pagelinks a {
-  color: #bcbcbc;
-}
-
 /* IMPORTANT: THIS IS FOR THE LANGUAGE SWITCHES */
 .content-tab {
   display: none;
@@ -240,7 +247,7 @@ hgroup {
 
 body {
   background: rgb(255, 255, 255);
-  color: #161616;
+  color: #2c2c2c;
 }
 
 body.dark-mode {
@@ -268,9 +275,9 @@ body.dark-mode footer {
 
 #logoTitle span:nth-child(1) { color: red; }
 #logoTitle span:nth-child(2) { color: orange; }
-#logoTitle span:nth-child(3) { color: #e6d40a; }
+#logoTitle span:nth-child(3) { color: rgb(255, 213, 0); }
 #logoTitle span:nth-child(4) { color: limegreen; }
-#logoTitle span:nth-child(5) { color: blue; }
+#logoTitle span:nth-child(5) { color: rgb(0, 81, 255); }
 #logoTitle span:nth-child(6) { color: violet; }
 /* Adjust as needed */
 
