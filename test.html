@@ -15,12 +15,10 @@
 <body>
 
   <header>
-   <nav class="settings">
-    <a class="tab" onclick="openTab(event,'german')">🇩🇪</a>
-    <a class="tab" onclick="openTab(event,'ukrainian')">🇺🇦</a>
-    <a class="tab" onclick="openTab(event,'english')">🇬🇧</a>
-    <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>  
-      </nav>
+    <nav class="settings">
+      <a class="tab" id="language-toggle" onclick="cycleLanguage()">🇩🇪</a>
+      <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>  
+    </nav>
     <hgroup>
       <div id="logoContainer">
         <div id="logoTitle"></div>
@@ -38,7 +36,6 @@
     </nav>
   </header>
   <div class="pagecontent">
-    <h1>Personality Test</h1>
     <form id="quizForm">
       <div id="questions"></div>
 
