@@ -22,7 +22,7 @@ function play() {
                     .map(letter => `<span>${letter}</span>`)
                     .join('');
             }
-        }, i * 80); // Increase the timeout for smoother animation
+        }, i * 90); // Increase the timeout for smoother animation
     }
 
     // Start with an empty container and fill it up with random characters
