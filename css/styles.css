@@ -1,14 +1,6 @@
 /* fonts are always imported first */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Share+Tech+Mono&family=Silkscreen&display=swap');
 
-
-/* styles for pseudo-elements (UNICODE-icons) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;
@@ -26,7 +18,6 @@ html {
 body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
-  color: #adadad;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -37,8 +28,6 @@ body {
 main {
   flex-grow: 1;
 }
-
-
 
 .grid {
   display: grid;
@@ -91,33 +80,13 @@ h6 {
 }
 
 #logoTitle {
-  font-size: clamp(2rem, 10vw, 5rem); /* Responsive font sizing */
+  font-size: clamp(2rem, 10vw, 5rem);
   font-weight: 600;
-  color: #e6d40a;
+  color: #ffe600;
   display: inline-block;
   font-family: 'Silkscreen', monospace;
   word-break: break-word;
   text-align: center;
-}
-
-/* basic styles for all lists */
-ol,
-ul {
-  padding-left: 2rem;
-}
-
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
 }
 
 /* link styles */
@@ -128,12 +97,6 @@ a {
 
 a:hover {
   color: turquoise;
-}
-
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
-  color: inherit;
-  text-decoration: none;
 }
 
 /* images styling */
@@ -162,48 +125,30 @@ textarea {
 
 #button {
   background: #ffc400;
-	border-bottom: 10px inset rgba(0,0,0,.5);
-	border-left: 7px inset rgba(0,0,0,.5);
-	border-right: 7px inset rgba(255,255,255,.5);
-	border-top: 7px inset rgba(255,255,255,.5);
-	box-sizing: border-box;
-	color: black;
-	cursor: pointer;
-	display: inline-block;
+  border-bottom: 10px inset rgba(0, 0, 0, .5);
+  border-left: 7px inset rgba(0, 0, 0, .5);
+  border-right: 7px inset rgba(255, 255, 255, .5);
+  border-top: 7px inset rgba(255, 255, 255, .5);
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
   font-family: 'Silkscreen', monospace;
-	margin-top: 7%;
-	min-width: 200px;
-	padding: .5rem;
-	text-transform: uppercase;
-	width: auto;
+  margin-top: 7%;
+  min-width: 200px;
+  padding: .5rem;
+  text-transform: uppercase;
+  width: auto;
+
   &:focus,
-	&:hover,
+  &:hover,
   &:active {
-		background: #ffae00;
-	}
-}
-
-textarea {
-  resize: vertical;
-}
-
-fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
+    background: #ffae00;
+  }
 }
 
 .langimg {
   text-align: center;
-}
-
-.copyright {
-  font-size: 80%;
-  opacity: 0.7;
-  text-align: center;
-  max-width: 50ch;
-  margin: 0 auto;
 }
 
 .settings {
@@ -239,20 +184,16 @@ hgroup {
   display: block;
 }
 
-#theme-toggle {
-  margin-left: 2em;
-}
-
 /* STYLES OF DARK SIDE */
 
 body {
-  background: rgb(255, 255, 255);
+  background: rgb(255, 247, 224);
   color: #2c2c2c;
 }
 
 body.dark-mode {
-  background: #161616;
-  color: rgb(255, 255, 255);
+  background: #0e1202;
+  color: rgb(255, 250, 244);
 }
 
 body.dark-mode a {
@@ -261,26 +202,47 @@ body.dark-mode a {
 
 body.dark-mode header,
 body.dark-mode footer {
-  background-color: #101010;
+  background-color: #042213;
 }
 
-.quellen ul {
-  text-align: center;
-  list-style-type: none;
+header,footer{
+  background-color: rgb(189, 226, 67);
 }
 
 .pagecontent {
   padding: 10%;
-} 
+}
 
-#logoTitle span:nth-child(1) { color: red; }
-#logoTitle span:nth-child(2) { color: orange; }
-#logoTitle span:nth-child(3) { color: rgb(255, 213, 0); }
-#logoTitle span:nth-child(4) { color: limegreen; }
-#logoTitle span:nth-child(5) { color: rgb(0, 81, 255); }
-#logoTitle span:nth-child(6) { color: violet; }
+#logoTitle span:nth-child(1) {
+  color: red;
+}
+
+#logoTitle span:nth-child(2) {
+  color: rgb(255, 136, 0);
+}
+
+#logoTitle span:nth-child(3) {
+  color: rgb(255, 200, 0);
+}
+
+#logoTitle span:nth-child(4) {
+  color: limegreen;
+}
+
+#logoTitle span:nth-child(5) {
+  color: rgb(0, 81, 255);
+}
+
+#logoTitle span:nth-child(6) {
+  color: rgb(253, 75, 253);
+}
+
 /* Adjust as needed */
 
-footer{
+footer {
   padding: 5%;
+  font-size: 90%;
+  text-align: center;
+  width:90%;
+  margin: 0 auto;
 }
