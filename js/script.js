@@ -1,23 +1,17 @@
 const languages = [
   { code: "german", flag: "🇩🇪" },
-  { code: "ukrainian", flag: "🇺🇦" },
-  { code: "english", flag: "🇬🇧" }
+  { code: "english", flag: "🇬🇧" },
+  { code: "ukrainian", flag: "🇺🇦" }
 ];
 
-let currentLangIndex = 1; 
+let currentLangIndex = 3; 
 
 function cycleLanguage() {
   currentLangIndex = (currentLangIndex + 1) % languages.length;
   const lang = languages[currentLangIndex];
-
-  // Update the language button flag
   const langBtn = document.getElementById("language-toggle");
   langBtn.textContent = lang.flag;
-
-  // Simulate an event-like object for openTab
   const fakeEvent = { currentTarget: langBtn };
-
-  // Switch the content tab
   openTab(fakeEvent, lang.code);
 }
 
