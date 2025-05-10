@@ -1,30 +1,32 @@
+console.log("test.js is running!");
+
 const characters = ["HTML", "CSS", "JS", "PYTHON", "SQL", "CPP"];
 const points = Object.fromEntries(characters.map(c => [c, 0]));
 
 const characterInfo = {
   HTML: {
     description: "Really grounded, smart, and calm—you remind me of HTML. I admire how you value your free time and fill it with meaningful hobbies and self-improvement; that’s becoming rare these days. Like HTML, you carry a rich history, and I bet you’re a great storyteller too. Your personal fortune cookie from me: You must expect great things of yourself before you can do them.",
-    image: "./img/dummy.jpg"
+    image: "./img/html_portrait.png"
   },
   CSS: {
     description: "Oh, I like you! You're so bubbly, stylish, and helpful—I bet tons of people want to be friends with you. Honestly, I’d probably “borrow” something from your closet, because your style is on another level. Like CSS, you're full of improvement ideas and love to beautify the world around you. Your personal fortune cookie from me: The beautiful thing about learning is that no one can take it away from you.",
-    image: "./img/dummy.jpg"
+    image: "./img/css_portrait.png"
   },
   JS: {
     description: "Ooh, you seem fun! You’re the perfect balance of weird and cool. You're the kind of person for those who can keep up with your tempo—and you’re totally fine with that. You might be impulsive or follow your heart, and I honestly love that about you. Also, major props for your music taste—so cool. Your personal fortune cookie from me: The best way to predict your future is to create it.",
-    image: "./img/dummy.jpg"
+    image: "./img/js_portrait.png"
   },
   PYTHON: {
     description: "Ahh, you’re a nice one. On cold days or in bad weather, your vibe stays unshakably warm—you carry that comforting aura no matter what. You’re also a great conversation partner. Even though you don’t talk about yourself much, everyone seems to talk about you! I get serious “I have no enemies” meme energy from you—you seem truly unproblematic. (Although… if you picked Thom Yorke during this test, I might have a few concerns to raise 😄) Your personal fortune cookie from me: Joy is what happens to us when we allow ourselves to recognize how good things really are.",
-    image: "./img/dummy.jpg"
+    image: "./img/py_portrait.png"
   },
   SQL: {
     description: "Hi! I admire the way you go about your plans and hobbies - so far from how I do it, but surely tactical! You will never get lost anywhere, and you are surely hard to compete with - as you always have your eyes on your goal and are hard to distract. Remember to have some time for yourself - you deserve rest! Keep it up, boss .Your personal fortune cookie from me: If I must give any of you advice it would be say yes. Say yes,and create your own destiny.",
-    image: "./img/dummy.jpg"
+    image: "./img/sql_portrait.png"
   },
   CPP: {
     description: "Hi (I say shyly). You're not like other girls, not like other men—not like other people in general. And honestly… I’m a little scared of you (respectfully).You’re powerful, intricate, and endlessly capable—there’s very little you can’t do once you set your logic to it. You may come off as tough to approach, but those who take the time to understand you are better for it. And even if it doesn’t always show, people admire you from a distance—maybe just too shy to say it out loud. :) Your personal fortune cookie from me: If you can imagine it, you can achieve it; if you can dream it, you can become it.",
-    image: "./img/dummy.jpg"
+    image: "./img/cpp_portrait.png"
   }
 };
 
@@ -149,7 +151,9 @@ nextBtn.addEventListener("click", () => {
 
 document.getElementById("quizForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  Object.keys(points).forEach(key => points[key] = 0);
+  console.log("Form submitted!");
+
+  // ... rest of the code
 
   questions.forEach((_, i) => {
     const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
@@ -166,14 +170,18 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
   quizFinished = true; // <--- add this
 
   document.getElementById("quizForm").style.display = "none";
-  document.getElementById("progressContainer").style.display = "none";
+  //document.getElementById("progressContainer").style.display = "none";
 
   // Show result only
   const resultDiv = document.getElementById("result");
-  resultDiv.style.display = "block";
-  resultDiv.innerHTML = `
-<h2>Your character is: ${topChar[0]}</h2>
-<p>${info.description}</p>
-<img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px; margin-top: 10px;" />
+resultDiv.style.display = "block"; // <-- Add this line to ensure it's visible
+
+resultDiv.innerHTML = `
+  <h2>Your character is: ${topChar[0]}</h2>
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px;" />
+    <p style="max-width: 600px;">${info.description}</p>
+  </div>
 `;
+
 });

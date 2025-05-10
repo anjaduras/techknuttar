@@ -23,10 +23,12 @@ h6 {
   display: block;
 }
 
-.result {
-  margin-top: 30px;
-  font-weight: bold;
-  font-family: 'Silkscreen', monospace;
+#result {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: left;
+  margin-top: 0;
 }
 
 #progressBarContainer {
