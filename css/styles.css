@@ -214,15 +214,15 @@ header,footer{
 }
 
 #logoTitle span:nth-child(1) {
-  color: red;
+  color: rgb(233, 1, 1);
 }
 
 #logoTitle span:nth-child(2) {
-  color: rgb(255, 136, 0);
+  color: rgb(255, 102, 0);
 }
 
 #logoTitle span:nth-child(3) {
-  color: rgb(243, 190, 0);
+  color: rgb(255, 157, 0);
 }
 
 #logoTitle span:nth-child(4) {
@@ -245,4 +245,17 @@ footer {
   text-align: center;
   width:90%;
   margin: 0 auto;
+}
+
+.links{
+  text-align: center;
+  list-style: none;
+}
+
+header, footer{
+  background-image: url(../img/3px-tile.png);
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  background-blend-mode:hue;
+
 }
