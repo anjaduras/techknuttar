@@ -43,7 +43,7 @@ body {
   padding: 1.5rem;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #fafafa;
+  background-color: #fffbf1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease, color 0.3s ease;
 }

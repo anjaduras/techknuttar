@@ -4,7 +4,7 @@ const languages = [
   { code: "ukrainian", flag: "🇺🇦" }
 ];
 
-let currentLangIndex = 3; 
+let currentLangIndex = 2;
 
 function cycleLanguage() {
   currentLangIndex = (currentLangIndex + 1) % languages.length;
@@ -34,9 +34,32 @@ function openTab(evt, tabName) {
     }
     evt.currentTarget.classList.add("active");
   }
+  updateHeaderPhrase(tabName);
 }
 
-  
+function updateHeaderPhrase(langCode) {
+  const phraseIds = {
+    german: "phrase-de",
+    english: "phrase-en",
+    ukrainian: "phrase-ua"
+  };
+
+  for (const code in phraseIds) {
+    const phraseElement = document.getElementById(phraseIds[code]);
+    if (phraseElement) {
+      phraseElement.style.display = (code === langCode) ? "block" : "none";
+    }
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Set initial language to German
+  currentLangIndex = 0;
+  const langBtn = document.getElementById("language-toggle");
+  langBtn.textContent = languages[currentLangIndex].flag;
+  openTab({ currentTarget: langBtn }, languages[currentLangIndex].code);
+});
+
   // Darkmode
   window.onload = () => {
     if (localStorage.getItem("theme") === "dark") {
@@ -54,31 +77,5 @@ function openTab(evt, tabName) {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
   
-  // Progress 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const progressBar = document.createElement("div");
-    progressBar.id = "progressBarContainer";
-    progressBar.innerHTML = `
-      <div id="progressBarInner"></div>
-    `;
-    document.body.insertBefore(progressBar, document.getElementById("quizForm"));
-  
-    const totalQuestions = document.querySelectorAll(".question").length;
-    const progressInner = document.getElementById("progressBarInner");
-  
-    function updateProgress(currentIndex) {
-      const percent = Math.round((currentIndex / totalQuestions) * 100);
-      progressInner.style.width = `${percent}%`;
-    }
-  
-    // Hook into your existing logic
-    const originalNext = nextBtn.onclick;
-    nextBtn.onclick = () => {
-      updateProgress(currentQuestion + 1);
-      originalNext();
-    };
-  
-    updateProgress(1); // start at question 1
-  });
+ 
   
