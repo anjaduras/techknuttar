@@ -259,3 +259,8 @@ header, footer{
   background-blend-mode:hue;
 
 }
+
+.logo-gif {
+  width: 150px; /* or whatever size fits your design */
+  height: auto;
+}
