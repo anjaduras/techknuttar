@@ -104,8 +104,7 @@ const questions = [
 const questionsDiv = document.getElementById("questions");
 let currentQuestion = 0;
 let quizFinished = false;
-
-
+let updateProgress;
 
 // Render questions
 document.getElementById("startBtn").addEventListener("click", () => {
@@ -113,13 +112,13 @@ document.getElementById("startBtn").addEventListener("click", () => {
   document.getElementById("quizForm").style.display = "block";
   document.getElementById("nextBtn").style.display = "inline-block"; // 👈 this line is important
 
-  // ✅ Now render the questions here:
+  // ✅ Render the questions here:
   questions.forEach((q, i) => {
     const div = document.createElement("div");
     div.className = "question";
     if (i === 0) div.classList.add("active");
     div.innerHTML = `<p>Q${i + 1}: ${q.q}</p>`;
-    q.a.forEach((answer) => {
+    q.a.forEach(answer => {
       const value = answer.value.join(",");
       div.innerHTML += `
         <label>
@@ -128,68 +127,82 @@ document.getElementById("startBtn").addEventListener("click", () => {
         </label><br/>
       `;
     });
-    document.getElementById("questions").appendChild(div);
+    questionsDiv.appendChild(div);
   });
-});
 
-const nextBtn = document.getElementById("nextBtn");
-const submitBtn = document.getElementById("submitBtn");
+  // Progress bar setup:
+  const progressBar = document.createElement("div");
+  progressBar.id = "progressBarContainer";
+  progressBar.innerHTML = `<div id="progressBarInner"></div>`;
+  document.querySelector(".testcontent").insertBefore(progressBar, document.getElementById("quizForm"));
 
-// Enable Next button on answer
-questionsDiv.addEventListener("change", () => {
-  nextBtn.disabled = false;
-});
+  const totalQuestions = questions.length;
+  const progressInner = document.getElementById("progressBarInner");
 
-nextBtn.addEventListener("click", () => {
-  const currentDiv = document.querySelectorAll(".question")[currentQuestion];
-  currentDiv.classList.remove("active");
-  currentQuestion++;
+  updateProgress = (index) => {
+    const percent = Math.round((index / totalQuestions) * 100);
+    progressInner.style.width = `${percent}%`;
+  };
 
-  if (currentQuestion < questions.length) {
-    document.querySelectorAll(".question")[currentQuestion].classList.add("active");
-    nextBtn.disabled = true;
+  updateProgress(1);  // Starts progress bar at 1%
 
-    if (currentQuestion === questions.length - 1) {
-      nextBtn.style.display = "none";
-      submitBtn.style.display = "inline-block";
-    }
-  }
-});
+  const nextBtn = document.getElementById("nextBtn");
+  const submitBtn = document.getElementById("submitBtn");
 
-document.getElementById("quizForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  console.log("Form submitted!");
+  // Enable Next button on answer
+  questionsDiv.addEventListener("change", () => {
+    nextBtn.disabled = false;
+  });
 
-  // ... rest of the code
+  nextBtn.addEventListener("click", () => {
+    const currentDiv = document.querySelectorAll(".question")[currentQuestion];
+    currentDiv.classList.remove("active");
+    currentQuestion++;
 
-  questions.forEach((_, i) => {
-    const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
-    answer.split(",").forEach(char => {
-      if (points[char] !== undefined) {
-        points[char]++;
+    if (currentQuestion < questions.length) {
+      document.querySelectorAll(".question")[currentQuestion].classList.add("active");
+      nextBtn.disabled = true;
+
+      updateProgress(currentQuestion + 1); // ✅ Update progress
+
+      if (currentQuestion === questions.length - 1) {
+        nextBtn.style.display = "none";
+        submitBtn.style.display = "inline-block";
       }
-    });
+    }
   });
 
-  const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
-  const info = characterInfo[topChar[0]];
+  document.getElementById("quizForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("Form submitted!");
 
-  quizFinished = true; // <--- add this
+    questions.forEach((_, i) => {
+      const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
+      answer.split(",").forEach(char => {
+        if (points[char] !== undefined) {
+          points[char]++;
+        }
+      });
+    });
 
-  document.getElementById("quizForm").style.display = "none";
-  //document.getElementById("progressContainer").style.display = "none";
+    const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
+    const info = characterInfo[topChar[0]];
 
-  // Show result only
-  const resultDiv = document.getElementById("result");
-resultDiv.style.display = "block"; // <-- Add this line to ensure it's visible
+    quizFinished = true; // <--- add this
 
-resultDiv.innerHTML = `
-  <h2>Your character is: ${topChar[0]}</h2>
-  <div style="display: flex; align-items: flex-start; gap: 20px;">
-    <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px;" />
-    <p style="max-width: 600px;">${info.description}</p>
-  </div>
-`;
+    document.getElementById("quizForm").style.display = "none";
+    //document.getElementById("progressContainer").style.display = "none";
 
+    // Show result only
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block"; // <-- Add this line to ensure it's visible
+
+    resultDiv.innerHTML = `
+      <h2>Your character is: ${topChar[0]}</h2>
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px;" />
+        <p style="max-width: 600px;">${info.description}</p>
+      </div>
+    `;
+  });
 });
-console.log("Points:", points);
