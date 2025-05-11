@@ -189,20 +189,23 @@ document.getElementById("startBtn").addEventListener("click", () => {
     const info = characterInfo[topChar[0]];
 
     quizFinished = true; // <--- add this
+    document.getElementById("quizForm").style.display = "none"; // Hide the quiz form
 
-    document.getElementById("quizForm").style.display = "none";
-    //document.getElementById("progressContainer").style.display = "none";
-
+    // Optionally hide any other containers related to the quiz form
+    document.getElementById("questions").style.display = "none"; // Hide the questions div
+    document.getElementById("nextBtn").style.display = "none"; // Hide the Next button
+    
     // Show result only
     const resultDiv = document.getElementById("result");
-    resultDiv.style.display = "block"; // <-- Add this line to ensure it's visible
-
+    resultDiv.style.display = "block"; // <-- Show result container
+    
     resultDiv.innerHTML = `
       <h2>Your character is: ${topChar[0]}</h2>
-      <div style="display: flex; align-items: flex-start; gap: 20px;">
-        <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px;" />
+      <div style="display: block; text-align: center;">
+        <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px; display: block; margin: 0 auto;" />
         <p style="max-width: 600px;">${info.description}</p>
       </div>
     `;
+    
   });
 });

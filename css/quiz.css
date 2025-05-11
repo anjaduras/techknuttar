@@ -69,13 +69,16 @@ label {
 
 input[type="radio"] {
   appearance: none;
-  width: 1.1em;
-  height: 1.1em;
   border: 2px solid #aaa;
   border-radius: 50%;
   margin-right: 0.5em;
   outline: none;
   transition: border 0.2s ease, background 0.2s ease;
+  width: 20px !important;  /* Force size with !important */
+  height: 20px !important; /* Force size with !important */
+  vertical-align: middle; /* Ensures the radio button aligns with the text */
+  margin-right: 10px; /* Optional: adds space between the radio button and text */
+  flex-shrink: 0; /* Prevents the radio buttons from shrinking */
 }
 
 input[type="radio"]:checked {
