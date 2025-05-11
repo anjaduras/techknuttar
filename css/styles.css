@@ -80,7 +80,7 @@ h6 {
 }
 
 #logoTitle {
-  font-size: clamp(2rem, 10vw, 5rem);
+  font-size: clamp(2.5rem, 10.5vw, 5.5rem);
   font-weight: 600;
   color: #ffe600;
   display: inline-block;

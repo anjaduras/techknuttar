@@ -623,13 +623,17 @@
 
   <footer class="page_footer">
     <p class="copyright">
-      <strong>SåDANA</strong> by <a href="">Anna Duras</a>. <br />
-      The source code is licensed
-      <a href="https://opensource.org/license/mit">MIT</a>. The website
-      content is licensed
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//">CC BY NC SA 4.0</a>.
+      <strong>SåDANA</strong> by <strong>Anna Duras</strong>. <br> All Rights Reserved&#174;
     </p>
+    <p id="last-updated"></p>
   </footer>
+  <script>
+    const lastModified = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit',
+    minute: '2-digit',};
+    document.getElementById('last-updated').textContent =
+      'Zuletzt aktualisiert am ' + lastModified.toLocaleDateString(undefined, options);
+  </script>
   <script src="js/logo.js"></script>
   <script src="js/script.js"></script>
 </body>
