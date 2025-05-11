@@ -5,99 +5,107 @@ const points = Object.fromEntries(characters.map(c => [c, 0]));
 
 const characterInfo = {
   HTML: {
-    description: "Really grounded, smart, and calm—you remind me of HTML. I admire how you value your free time and fill it with meaningful hobbies and self-improvement; that’s becoming rare these days. Like HTML, you carry a rich history, and I bet you’re a great storyteller too. Your personal fortune cookie from me: You must expect great things of yourself before you can do them.",
+    description: "Du bist bodenständig, reflektiert und ruhig – ganz wie HTML. Du scheinst deine Freizeit sinnvoll zu nutzen, sei es durch Hobbys oder persönliche Weiterentwicklung. Diese Art von Selbstbewusstsein ist heute selten. Wie HTML trägst du eine reiche Geschichte in dir – ich wette, du bist ein*e großartige*r Geschichtenerzähler*in. Dein persönlicher Glückskeks: Du musst Großes von dir erwarten, bevor du es erreichen kannst.",
     image: "./img/html_portrait.png"
   },
   CSS: {
-    description: "Oh, I like you! You're so bubbly, stylish, and helpful—I bet tons of people want to be friends with you. Honestly, I’d probably “borrow” something from your closet, because your style is on another level. Like CSS, you're full of improvement ideas and love to beautify the world around you. Your personal fortune cookie from me: The beautiful thing about learning is that no one can take it away from you.",
+    description: "Du bist stilvoll, kreativ und fällst einfach auf – ganz wie CSS! Du bringst wahrscheinlich Farbe in jeden Raum und inspirierst andere, ohne es zu merken. Dein Sinn für Mode ist sicher großartig. Du liebst es, die Welt schöner und persönlicher zu gestalten. Dein persönlicher Glückskeks: Das Schöne am Lernen ist, dass es dir niemand nehmen kann.",
     image: "./img/css_portrait.png"
   },
   JS: {
-    description: "Ooh, you seem fun! You’re the perfect balance of weird and cool. You're the kind of person for those who can keep up with your tempo—and you’re totally fine with that. You might be impulsive or follow your heart, and I honestly love that about you. Also, major props for your music taste—so cool. Your personal fortune cookie from me: The best way to predict your future is to create it.",
+    description: "Du hast eine spontane, elektrische Ausstrahlung – witzig, schrullig und super cool. Du folgst vielleicht oft deinem Bauchgefühl, aber genau das macht deinen Charme aus. Menschen, die mit deinem Tempo mithalten können, haben großes Glück. Und dein Musikgeschmack? Echt top. Dein persönlicher Glückskeks: Der beste Weg, die Zukunft vorherzusagen, ist, sie selbst zu gestalten.",
     image: "./img/js_portrait.png"
   },
   PYTHON: {
-    description: "Ahh, you’re a nice one. On cold days or in bad weather, your vibe stays unshakably warm—you carry that comforting aura no matter what. You’re also a great conversation partner. Even though you don’t talk about yourself much, everyone seems to talk about you! I get serious “I have no enemies” meme energy from you—you seem truly unproblematic. (Although… if you picked Thom Yorke during this test, I might have a few concerns to raise 😄) Your personal fortune cookie from me: Joy is what happens to us when we allow ourselves to recognize how good things really are.",
+    description: "Du bist warmherzig, aufmerksam und angenehm in deiner Art. Du sprichst vielleicht nicht viel über dich, aber andere reden viel über dich – im besten Sinne. Deine ruhige Ausstrahlung gibt anderen Sicherheit, und man spürt sofort, dass man dir vertrauen kann. Du bist der Typ Freund*in, der immer da ist – auch wenn es still ist. Dein persönlicher Glückskeks: Freude entsteht, wenn wir erkennen, wie gut die Dinge wirklich sind.",
     image: "./img/py_portrait.png"
   },
   SQL: {
-    description: "Hi! I admire the way you go about your plans and hobbies - so far from how I do it, but surely tactical! You will never get lost anywhere, and you are surely hard to compete with - as you always have your eyes on your goal and are hard to distract. Remember to have some time for yourself - you deserve rest! Keep it up, boss .Your personal fortune cookie from me: If I must give any of you advice it would be say yes. Say yes,and create your own destiny.",
+    description: "Du bist organisiert, zielstrebig und denkst immer ein paar Schritte voraus. Du lässt dich nicht leicht ablenken, und wenn du ein Ziel hast, verfolgst du es konsequent. Andere kommen da kaum hinterher – deine Effizienz ist bewundernswert. Vergiss nur nicht, dir auch mal Ruhe zu gönnen. Dein persönlicher Glückskeks: Wenn ich dir nur einen Ratschlag geben darf, dann diesen: Sag Ja. Sag Ja – und gestalte dein eigenes Schicksal.",
     image: "./img/sql_portrait.png"
   },
   CPP: {
-    description: "Hi (I say shyly). You're not like other girls, not like other men—not like other people in general. And honestly… I’m a little scared of you (respectfully).You’re powerful, intricate, and endlessly capable—there’s very little you can’t do once you set your logic to it. You may come off as tough to approach, but those who take the time to understand you are better for it. And even if it doesn’t always show, people admire you from a distance—maybe just too shy to say it out loud. :) Your personal fortune cookie from me: If you can imagine it, you can achieve it; if you can dream it, you can become it.",
+    description: "Du bist klug, komplex und unglaublich leistungsfähig. Vielleicht wirkst du auf den ersten Blick etwas unnahbar – aber wer sich die Mühe macht, dich kennenzulernen, ist beeindruckt von dem, was du kannst. Du lässt nicht jeden sofort an dich ran, aber wenn doch, dann entsteht eine starke Verbindung. Dein persönlicher Glückskeks: Wenn du es dir vorstellen kannst, kannst du es erreichen. Wenn du es träumen kannst, kannst du es werden.",
     image: "./img/cpp_portrait.png"
   }
 };
-
-
 const questions = [
   {
-    q: "1. Choose your go-to summer drink:", a: [
-      { label: "Mohito", value: ["JS"] },
-      { label: "Sparkling water", value: ["SQL"] },
-      { label: "Orange juice", value: ["PYTHON"] }
+    q: "1. Was ist dein Lieblingsgetränk im Sommer?",
+    a: [
+      { label: "Mojito", value: ["JS"] },
+      { label: "Sprudelwasser", value: ["SQL"] },
+      { label: "Orangensaft", value: ["PYTHON"] }
     ]
   },
   {
-    q: "2. Which school subject of these do you like the most?", a: [
-      { label: "History", value: ["HTML"] },
-      { label: "Chemistry", value: ["CSS"] },
-      { label: "Math", value: ["CPP"] }
+    q: "2. Welches Schulfach magst du am liebsten?",
+    a: [
+      { label: "Geschichte", value: ["HTML"] },
+      { label: "Chemie", value: ["CSS"] },
+      { label: "Mathematik", value: ["CPP"] }
     ]
   },
   {
-    q: "3. Do you like change?", a: [
-      { label: "Yes", value: ["JS"] },
-      { label: "No", value: ["SQL"] },
-      { label: "Can adjust", value: ["PYTHON"] }
+    q: "3. Magst du Veränderungen?",
+    a: [
+      { label: "Ja", value: ["JS"] },
+      { label: "Nein", value: ["SQL"] },
+      { label: "Ich kann mich anpassen", value: ["PYTHON"] }
     ]
   },
   {
-    q: "4. Choose your weekend plan:", a: [
-      { label: "Book club", value: ["HTML"] },
-      { label: "Gaming event", value: ["CPP"] },
-      { label: "Planning the next week", value: ["SQL"] }
+    q: "4. Was wäre dein Wochenendplan?",
+    a: [
+      { label: "Buchclub", value: ["HTML"] },
+      { label: "Gaming-Event", value: ["CPP"] },
+      { label: "Die kommende Woche durchplanen", value: ["SQL"] }
     ]
   },
   {
-    q: "5. Choose a bird:", a: [
-      { label: "Peacock", value: ["CSS"] },
-      { label: "Crow", value: ["HTML"] },
-      { label: "Parrot", value: ["JS"] }
+    q: "5. Welches Zitat aus *Twin Peaks* passt gerade zu deiner Stimmung?",
+    a: [
+      { label: `"Ich habe das Gefühl, ich kenne sie ... aber manchmal biegen sich meine Arme nach hinten."`, value: ["CPP"] },
+      { label: `"Mein Schatten ist immer bei mir. Manchmal vorne, manchmal hinten. Manchmal links, manchmal rechts. Außer an bewölkten Tagen oder nachts."`, value: ["CSS"] },
+      { label: `"Harry, ich verrate dir ein kleines Geheimnis. Gib dir jeden Tag, einmal am Tag, ein Geschenk..."`, value: ["PYTHON"] }
     ]
   },
   {
-    q: "6. Which Twin Peaks quote sounds the best right now?", a: [
-      { label: "I feel like I know her... but sometimes my arms bend back.", value: ["CPP"] },
-      { label: "My shadow is always with me. Sometimes ahead, sometimes behind. Sometimes to the left, sometimes to the right. Except on cloudy days, or at night.", value: ["CSS"] },
-      { label: "Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.", value: ["PYTHON"] }
+    q: "6. Wähle einen Vogel:",
+    a: [
+      { label: "Pfau", value: ["CSS"] },
+      { label: "Krähe", value: ["HTML"] },
+      { label: "Papagei", value: ["JS"] }
     ]
   },
   {
-    q: "7. Did you lie during the test?", a: [
-      { label: "Yes", value: ["JS"] },
-      { label: "No", value: ["PYTHON"] },
-      { label: "Won't tell", value: ["CPP"] }
-    ]
-  },
-  {
-    q: "8. The day before going on the trip, what are you most concerned about?", a: [
-      { label: "Making sure you have the best outfits", value: ["CSS"] },
-      { label: "Cheching the plan to make sure you'll see all the important places", value: ["HTML"] },
-      { label: "Checking if the tickets/bookings information is correct", value: ["SQL"] }
-    ]
-  },
-  {
-    q: "9. Choose a music band:", a: [
-      { label: "Anything with fonk", value: ["CPP"] },
-      { label: "Tyler the Creator", value: ["JS"] },
+    q: "7. Wähle eine Musikrichtung oder Band:",
+    a: [
+      { label: "Alles mit Funk", value: ["CPP"] },
+      { label: "Tyler, The Creator", value: ["JS"] },
       { label: "Frank Sinatra", value: ["HTML"] },
       { label: "Fleetwood Mac", value: ["CSS"] },
       { label: "Thom Yorke", value: ["PYTHON"] },
-      { label: "Men At Work", value: ["SQL"] }
+      { label: "Men at Work", value: ["SQL"] }
+    ]
+  },
+  {
+    q: "8. Was beschäftigt dich am meisten vor einer Reise?",
+    a: [
+      { label: "Das perfekte Outfit zusammenstellen", value: ["CSS"] },
+      { label: "Sicherstellen, dass du alle Highlights siehst", value: ["HTML"] },
+      { label: "Tickets und Buchungen prüfen", value: ["SQL"] }
+    ]
+  },
+  {
+    q: "9. Hast du in diesem Test gelogen?",
+    a: [
+      { label: "Ja", value: ["JS"] },
+      { label: "Nein", value: ["PYTHON"] },
+      { label: "Sag ich nicht", value: ["CPP"] }
     ]
   }
+  
 ];
 
 
@@ -106,13 +114,11 @@ let currentQuestion = 0;
 let quizFinished = false;
 let updateProgress;
 
-// Render questions
 document.getElementById("startBtn").addEventListener("click", () => {
   document.getElementById("intro").style.display = "none";
   document.getElementById("quizForm").style.display = "block";
-  document.getElementById("nextBtn").style.display = "inline-block"; // 👈 this line is important
+  document.getElementById("nextBtn").style.display = "inline-block"; 
 
-  // ✅ Render the questions here:
   questions.forEach((q, i) => {
     const div = document.createElement("div");
     div.className = "question";
@@ -130,7 +136,6 @@ document.getElementById("startBtn").addEventListener("click", () => {
     questionsDiv.appendChild(div);
   });
 
-  // Progress bar setup:
   const progressBar = document.createElement("div");
   progressBar.id = "progressBarContainer";
   progressBar.innerHTML = `<div id="progressBarInner"></div>`;
@@ -144,12 +149,11 @@ document.getElementById("startBtn").addEventListener("click", () => {
     progressInner.style.width = `${percent}%`;
   };
 
-  updateProgress(1);  // Starts progress bar at 1%
+  updateProgress(1); 
 
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
 
-  // Enable Next button on answer
   questionsDiv.addEventListener("change", () => {
     nextBtn.disabled = false;
   });
@@ -163,7 +167,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
       document.querySelectorAll(".question")[currentQuestion].classList.add("active");
       nextBtn.disabled = true;
 
-      updateProgress(currentQuestion + 1); // ✅ Update progress
+      updateProgress(currentQuestion + 1); 
 
       if (currentQuestion === questions.length - 1) {
         nextBtn.style.display = "none";
@@ -174,7 +178,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
 
   document.getElementById("quizForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log("Form submitted!");
+    console.log("Quiz submitted!");
 
     questions.forEach((_, i) => {
       const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
@@ -189,18 +193,15 @@ document.getElementById("startBtn").addEventListener("click", () => {
     const info = characterInfo[topChar[0]];
 
     quizFinished = true; // <--- add this
-    document.getElementById("quizForm").style.display = "none"; // Hide the quiz form
-
-    // Optionally hide any other containers related to the quiz form
-    document.getElementById("questions").style.display = "none"; // Hide the questions div
-    document.getElementById("nextBtn").style.display = "none"; // Hide the Next button
-    
-    // Show result only
+    document.getElementById("quizForm").style.display = "none";
+    document.getElementById("questions").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none"; 
+  
     const resultDiv = document.getElementById("result");
-    resultDiv.style.display = "block"; // <-- Show result container
+    resultDiv.style.display = "block";
     
     resultDiv.innerHTML = `
-      <h2>Your character is: ${topChar[0]}</h2>
+      <h2>Dein Charakter ist: ${topChar[0]}</h2>
       <div style="display: block; text-align: center;">
         <img src="${info.image}" alt="${topChar[0]}" style="max-width: 200px; display: block; margin: 0 auto;" />
         <p style="max-width: 600px;">${info.description}</p>
