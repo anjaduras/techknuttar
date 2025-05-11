@@ -106,23 +106,30 @@ let currentQuestion = 0;
 let quizFinished = false;
 
 
-// Render questions
-questions.forEach((q, i) => {
-  const div = document.createElement("div");
-  div.className = "question";
-  if (i === 0) div.classList.add("active");
-  div.innerHTML = `<p>Q${i + 1}: ${q.q}</p>`;
-  q.a.forEach((answer, j) => {
-    const value = answer.value.join(",");
-    div.innerHTML += `
-<label>
-  <input type="radio" name="q${i}" value="${value}" />
-  ${answer.label}
-</label><br/>
-`;
-  });
 
-  questionsDiv.appendChild(div);
+// Render questions
+document.getElementById("startBtn").addEventListener("click", () => {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("quizForm").style.display = "block";
+  document.getElementById("nextBtn").style.display = "inline-block"; // 👈 this line is important
+
+  // ✅ Now render the questions here:
+  questions.forEach((q, i) => {
+    const div = document.createElement("div");
+    div.className = "question";
+    if (i === 0) div.classList.add("active");
+    div.innerHTML = `<p>Q${i + 1}: ${q.q}</p>`;
+    q.a.forEach((answer) => {
+      const value = answer.value.join(",");
+      div.innerHTML += `
+        <label>
+          <input type="radio" name="q${i}" value="${value}" />
+          ${answer.label}
+        </label><br/>
+      `;
+    });
+    document.getElementById("questions").appendChild(div);
+  });
 });
 
 const nextBtn = document.getElementById("nextBtn");
@@ -185,3 +192,4 @@ resultDiv.innerHTML = `
 `;
 
 });
+console.log("Points:", points);

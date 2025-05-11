@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Test</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+  </head>
+  <style></style>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personality Test</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/quiz.css">
-</head>
-<style>
-
-</style>
-
-<body>
-
-  <header>
-    <nav class="settings">
-      <a class="tab" id="language-toggle" onclick="cycleLanguage()">🇩🇪</a>
-      <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>  
-    </nav>
-    <hgroup>
-      <div id="logoContainer">
-        <div id="logoTitle"></div>
-        <div id="tryAgain">🔄</div>
+  <body>
+    <header>
+      <nav class="settings">
+        <a class="tab" id="language-toggle" onclick="cycleLanguage()">🇩🇪</a>
+        <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>
+      </nav>
+      <hgroup>
+        <div id="logoContainer">
+          <div id="logoTitle"></div>
+          <div id="tryAgain">🔄</div>
+        </div>
+        <p>
+          what would coding languages be if they were just passing-by people?
+        </p>
+      </hgroup>
+      <nav id="pagelinks">
+        <a href="./index.html">Home</a>
+        <a href="./links.html">Links</a>
+        <a href="./test.html">Test</a>
+      </nav>
+    </header>
+    <div class="testcontent">
+      <div id="intro">
+        <h2>Well hello there!</h2>
+        <p>
+          Welcome to my test! Im really excited for you to take it. <br>
+          Disclaimer: all the questions are based on my personal language interpritations and are not supported by facts articles and so on. <br> Another disclaimer is that I like all the languages (both programming, markup and style sheet) displayed here. You cannot get a bad result. Unless you hate one of these languages (reconsider!) :))
+        </p>
+        <button id="startBtn">Start Quiz</button>
       </div>
-      <p>
-        what would coding languages be if they were just passing-by people?
+      <form id="quizForm">
+        <div id="questions"></div>
+
+        <button type="button" id="nextBtn" disabled style="display: none">Next</button>
+        <button type="submit" id="submitBtn" style="display: none">
+          Get Result
+        </button>
+      </form>
+    </div>
+
+    <div id="result" style="display: none"></div>
+    <footer>
+      <p class="copyright">
+        <strong>SåDANA</strong> by <a href="">Anna Duras</a>. <br />
+        The source code is licensed
+        <a href="https://opensource.org/license/mit">MIT</a>. The website
+        content is licensed
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//"
+          >CC BY NC SA 4.0</a
+        >.
       </p>
-    </hgroup>
-    <nav id="pagelinks">
-      <a href="./index.html">Home</a>
-      <a href="./links.html">Links</a>
-      <a href="./test.html">Test</a>
-    </nav>
-  </header>
-  <div class="testcontent">
-    <form id="quizForm">
-      <div id="questions"></div>
-
-      <button type="button" id="nextBtn" disabled>Next</button>
-      <button type="submit" id="submitBtn" style="display: none;">Get Result</button>
-    </form>
-  </div>
-
-  <div id="result" style="display: none;"></div>
-  <footer>
-    <p class="copyright">
-      <strong>SåDANA</strong> by <a href="">Anna Duras</a>. <br />
-      The source code is licensed
-      <a href="https://opensource.org/license/mit">MIT</a>. The website
-      content is licensed
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//">CC BY NC SA 4.0</a>.
-    </p>
-  </footer>
-  <script src="js/logo.js"></script>
-  <script src="js/test.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    </footer>
+    <script src="js/logo.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
