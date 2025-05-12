@@ -163,7 +163,6 @@ textarea {
   padding: .5rem;
   text-transform: uppercase;
   width: auto;
-
   &:focus,
   &:hover,
   &:active {
@@ -232,7 +231,6 @@ footer {
 .pagecontent {
   padding: 10%;
 }
-
 /* additional header & footer styling */
 
 footer {
@@ -246,7 +244,7 @@ footer {
 /* header & footer TEXTURE - as assigned */
 header,
 footer {
-  background-image: url(../img/3px-tile.png);
+  background-image: url(../img/3px-tile.png); 
   background-size: 300px 300px;
   background-repeat: repeat;
   background-blend-mode: hue;
