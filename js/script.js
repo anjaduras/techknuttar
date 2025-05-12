@@ -1,3 +1,4 @@
+// LANGUAGE TOGGLE
 const languages = [
   { code: "german", flag: "🇩🇪" },
   { code: "english", flag: "🇬🇧" },
@@ -26,7 +27,7 @@ function openTab(evt, tabName) {
     targetTab.classList.add("active");
   }
 
-  // Optional: only highlight button if tab elements exist
+  // only highlight button if tab elements exist -> somehow conflicts with css and causes icons to stack on top of one another
   if (evt && evt.currentTarget) {
     const tablinks = document.getElementsByClassName("tab");
     for (let i = 0; i < tablinks.length; i++) {
@@ -36,6 +37,8 @@ function openTab(evt, tabName) {
   }
   updateHeaderPhrase(tabName);
 }
+
+// Separate translation for header phrase
 
 function updateHeaderPhrase(langCode) {
   const phraseIds = {
@@ -53,29 +56,27 @@ function updateHeaderPhrase(langCode) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Set initial language to German
+  // setting initial language to German
   currentLangIndex = 0;
   const langBtn = document.getElementById("language-toggle");
   langBtn.textContent = languages[currentLangIndex].flag;
   openTab({ currentTarget: langBtn }, languages[currentLangIndex].code);
 });
 
-  // Darkmode
-  window.onload = () => {
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
-      document.getElementById("theme-toggle").textContent = "🌙";
-    }
-  };
-  
-  function toggleDarkMode() {
-    const body = document.body;
-    const icon = document.getElementById("theme-toggle");
-    const isDark = body.classList.toggle("dark-mode");
-  
-    icon.textContent = isDark ? "🌙" : "🌞";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+// dark / light theme
+
+window.onload = () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    document.getElementById("theme-toggle").textContent = "🌙";
   }
-  
- 
-  
+};
+
+function toggleDarkMode() {
+  const body = document.body;
+  const icon = document.getElementById("theme-toggle");
+  const isDark = body.classList.toggle("dark-mode");
+
+  icon.textContent = isDark ? "🌙" : "🌞";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}

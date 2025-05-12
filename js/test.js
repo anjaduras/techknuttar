@@ -105,9 +105,8 @@ const questions = [
       { label: "Sag ich nicht", value: ["CPP"] }
     ]
   }
-  
-];
 
+];
 
 const questionsDiv = document.getElementById("questions");
 let currentQuestion = 0;
@@ -117,7 +116,7 @@ let updateProgress;
 document.getElementById("startBtn").addEventListener("click", () => {
   document.getElementById("intro").style.display = "none";
   document.getElementById("quizForm").style.display = "block";
-  document.getElementById("nextBtn").style.display = "inline-block"; 
+  document.getElementById("nextBtn").style.display = "inline-block";
 
   questions.forEach((q, i) => {
     const div = document.createElement("div");
@@ -136,6 +135,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
     questionsDiv.appendChild(div);
   });
 
+  // Progress bar
   const progressBar = document.createElement("div");
   progressBar.id = "progressBarContainer";
   progressBar.innerHTML = `<div id="progressBarInner"></div>`;
@@ -149,7 +149,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
     progressInner.style.width = `${percent}%`;
   };
 
-  updateProgress(1); 
+  updateProgress(1);
 
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
@@ -167,7 +167,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
       document.querySelectorAll(".question")[currentQuestion].classList.add("active");
       nextBtn.disabled = true;
 
-      updateProgress(currentQuestion + 1); 
+      updateProgress(currentQuestion + 1);
 
       if (currentQuestion === questions.length - 1) {
         nextBtn.style.display = "none";
@@ -175,10 +175,10 @@ document.getElementById("startBtn").addEventListener("click", () => {
       }
     }
   });
-
+  // Submitting
   document.getElementById("quizForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log("Quiz submitted!");
+    console.log("quiz submitted successfully!");
 
     questions.forEach((_, i) => {
       const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
@@ -192,14 +192,14 @@ document.getElementById("startBtn").addEventListener("click", () => {
     const topChar = Object.entries(points).sort((a, b) => b[1] - a[1])[0];
     const info = characterInfo[topChar[0]];
 
-    quizFinished = true; // <--- add this
+    quizFinished = true;
     document.getElementById("quizForm").style.display = "none";
     document.getElementById("questions").style.display = "none";
-    document.getElementById("nextBtn").style.display = "none"; 
-  
+    document.getElementById("nextBtn").style.display = "none";
+
     const resultDiv = document.getElementById("result");
     resultDiv.style.display = "block";
-    
+
     resultDiv.innerHTML = `
       <h2>Dein Charakter ist: ${topChar[0]}</h2>
       <div style="display: block; text-align: center;">
@@ -207,6 +207,6 @@ document.getElementById("startBtn").addEventListener("click", () => {
         <p style="max-width: 600px;">${info.description}</p>
       </div>
     `;
-    
+
   });
 });
