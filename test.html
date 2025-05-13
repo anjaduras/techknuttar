@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Anna Duras" />
-    <meta name="description" content="" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="author" content="Anna Duras" >
+    <meta name="description" content="Programmiersprachen Personalisierung Test" >
     <title>Personality Test</title>
-    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" >
   </head>
   <body>
     <header>
@@ -14,26 +14,24 @@
         <a class="tab" id="language-toggle" onclick="cycleLanguage()">🇩🇪</a>
         <a class="tab" id="theme-toggle" onclick="toggleDarkMode()">🌞</a>
       </nav>
-      <hgroup>
-        <div id="logoContainer">
-          <img src="./img/giphy.gif" alt="left gif" class="logo-gif" />
-          <div id="logoTitle"></div>
-          <img src="./img/giphy.gif" alt="right gif" class="logo-gif" />
-          <div id="tryAgain">🔄</div>
-        </div>
-        <p class="header-phrase" id="phrase-de" style="display: none">
-          Was w&#228;ren Programmiersprachen, wenn sie einfach nur vorbeigehende
-          Menschen w&#228;ren?
-        </p>
-        <p class="header-phrase" id="phrase-en">
-          What would coding languages be if they were just passing-by people?
-        </p>
-        <p class="header-phrase" id="phrase-ua" style="display: none">
-          Що було б, якби мови програмування були просто людьми, що проходять
-          повз?
-        </p>
-        <p><i>**Test ist nut auf Deutsch verfügbar</i></p>
-      </hgroup>
+      <div class="hgroup">
+      <div id="logoContainer">
+        <img src="./img/giphy.gif" alt="left gif" class="logo-gif" >
+        <div id="logoTitle"></div>
+        <img src="./img/giphy.gif" alt="right gif" class="logo-gif" >
+        <div id="tryAgain">🔄</div>
+      </div>
+      <p class="header-phrase" id="phrase-de" style="display: none">
+        Was w&#228;ren Programmiersprachen, wenn sie einfach nur vorbeigehende
+        Menschen w&#228;ren?
+      </p>
+      <p class="header-phrase" id="phrase-en">
+        What would coding languages be if they were just passing-by people?
+      </p>
+      <p class="header-phrase" id="phrase-ua" style="display: none">
+        Що було б, якби мови програмування були просто перехожими?
+      </p>
+    </div>
       <nav id="pagelinks">
         <a href="./index.html">Home</a>
         <a href="./links.html">Links</a>
@@ -45,10 +43,10 @@
         <h2>Willkommen bei meinem Test!</h2>
         <p>
           Ich freue mich sehr, dass du ihn machst.
-          <br />
+          <br >
           Haftungsausschluss: Alle Fragen basieren auf meinen persönlichen
           Sprachinterpretationen und sind nicht durch Faktenartikel oder
-          dergleichen gestützt. <br />
+          dergleichen gestützt. <br >
           Ein weiterer Haftungsausschluss ist, dass ich alle hier angezeigten
           Sprachen (Programmierung, Markup und Stylesheet) mag. Es kann kein
           schlechtes Ergebnis geben. Es sei denn, du hasst eine dieser Sprachen
@@ -71,9 +69,17 @@
 
     <footer class="page_footer">
       <p class="copyright">
-        <strong>SåDANA</strong> by <strong>Anna Duras</strong>. <br />
+        <strong>SåDANA</strong> by <strong>Anna Duras</strong>. <br >
         All Rights Reserved&#174;
       </p>
+      
+    <p>
+     <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Richtiges HTML & CSS!" >
+    </a>
+    </p>
       <p id="last-updated"></p>
     </footer>
     <script>

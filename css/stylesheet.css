@@ -16,7 +16,7 @@ html {
 
 /* works for the whole website */
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.6;
   text-align: left;
   display: flex;
@@ -77,7 +77,8 @@ h3 {
   color: #ffe600;
   display: inline-block;
   font-family: 'Silkscreen', monospace;
-  word-break: break-word;
+  /* word-break: break-word; */
+  word-break: normal;
   text-align: center;
 }
 
@@ -147,7 +148,7 @@ textarea {
 
 /* retro button */
 
-#button {
+.button {
   background: #ffc400;
   border-bottom: 10px inset rgba(0, 0, 0, .5);
   border-left: 7px inset rgba(0, 0, 0, .5);
@@ -163,11 +164,6 @@ textarea {
   padding: .5rem;
   text-transform: uppercase;
   width: auto;
-  &:focus,
-  &:hover,
-  &:active {
-    background: #ffae00;
-  }
 }
 
 /* theme & language toggles and page nav */
@@ -182,7 +178,7 @@ textarea {
   padding: 0.3em;
 }
 
-hgroup {
+.hgroup {
   text-align: center;
   padding: 5em;
   padding-top: 1em;
